@@ -51,13 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="ArticuloCln.cs" />
-=======
-    <Compile Include="CategoriaCln.cs" />
-    <Compile Include="IngresoCln.cs" />
-    <Compile Include="PersonaCln.cs" />
->>>>>>> 09b6e57520bf170046d0687f0fc9e7d157d04311
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioCln.cs" />
     <Compile Include="VentaCln.cs" />
