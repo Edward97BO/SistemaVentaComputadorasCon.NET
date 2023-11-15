@@ -34,13 +34,13 @@ namespace ClnComputadorasG3
             }
         }
 
-        public static int eliminar(int id, string ventaRegistro)
+        public static int eliminar(int id, string usuarioRegistro)
         {
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.Venta.Find(id);
                 existente.estado = -1;
-                existente.ventaRegistro = ventaRegistro;
+                existente.usuarioRegistro = usuarioRegistro;
                 return context.SaveChanges();
             }
         }
