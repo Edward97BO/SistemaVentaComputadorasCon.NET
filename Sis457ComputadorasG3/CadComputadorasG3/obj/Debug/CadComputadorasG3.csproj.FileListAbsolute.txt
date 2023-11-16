@@ -46,3 +46,15 @@ D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComp
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CopyComplete
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.dll
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.pdb
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.dll.config
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.dll
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.pdb
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.dll
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.SqlServer.dll
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.xml
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.SqlServer.xml
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.AssemblyReference.cache
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CoreCompileInputs.cache
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CopyComplete
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.dll
+D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.pdb

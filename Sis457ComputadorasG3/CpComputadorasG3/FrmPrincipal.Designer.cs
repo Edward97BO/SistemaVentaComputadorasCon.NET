@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -39,7 +40,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEmpleado = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
@@ -71,9 +71,22 @@
             this.pnlTitulo.Controls.Add(this.btnCerrar);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(1300, 35);
+            this.pnlTitulo.Size = new System.Drawing.Size(1733, 43);
             this.pnlTitulo.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTitulo.Location = new System.Drawing.Point(16, 11);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(143, 23);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "::: \"IT Pro\" ::: ";
             // 
             // pnlMenu
             // 
@@ -94,86 +107,84 @@
             this.pnlMenu.Controls.Add(this.btnCategoria);
             this.pnlMenu.Controls.Add(this.pictureBox1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 35);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 43);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(220, 615);
+            this.pnlMenu.Size = new System.Drawing.Size(293, 757);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(22, 545);
+            this.panel7.Location = new System.Drawing.Point(29, 671);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 41);
+            this.panel7.Size = new System.Drawing.Size(13, 50);
             this.panel7.TabIndex = 14;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(22, 488);
+            this.panel6.Location = new System.Drawing.Point(29, 601);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 41);
+            this.panel6.Size = new System.Drawing.Size(13, 50);
             this.panel6.TabIndex = 12;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(22, 432);
+            this.panel5.Location = new System.Drawing.Point(29, 532);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 41);
+            this.panel5.Size = new System.Drawing.Size(13, 50);
             this.panel5.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(22, 375);
+            this.panel4.Location = new System.Drawing.Point(29, 462);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 41);
+            this.panel4.Size = new System.Drawing.Size(13, 50);
             this.panel4.TabIndex = 8;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(22, 318);
+            this.panel3.Location = new System.Drawing.Point(29, 391);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 41);
+            this.panel3.Size = new System.Drawing.Size(13, 50);
             this.panel3.TabIndex = 6;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(22, 262);
+            this.panel2.Location = new System.Drawing.Point(29, 322);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 41);
+            this.panel2.Size = new System.Drawing.Size(13, 50);
             this.panel2.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(22, 208);
+            this.panel1.Location = new System.Drawing.Point(29, 256);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 41);
+            this.panel1.Size = new System.Drawing.Size(13, 50);
             this.panel1.TabIndex = 2;
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(220, 35);
+            this.pnlContenedor.Location = new System.Drawing.Point(293, 43);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1080, 615);
+            this.pnlContenedor.Size = new System.Drawing.Size(1440, 757);
             this.pnlContenedor.TabIndex = 3;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(117, 19);
-            this.lblTitulo.TabIndex = 4;
-            this.lblTitulo.Text = "::: \"IT Pro\" ::: ";
             // 
             // btnEmpleado
             // 
@@ -186,9 +197,10 @@
             this.btnEmpleado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEmpleado.Image = global::CpComputadorasG3.Properties.Resources.empleado;
             this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(38, 545);
+            this.btnEmpleado.Location = new System.Drawing.Point(51, 671);
+            this.btnEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(158, 42);
+            this.btnEmpleado.Size = new System.Drawing.Size(211, 52);
             this.btnEmpleado.TabIndex = 13;
             this.btnEmpleado.Text = "Empleados";
             this.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,9 +217,10 @@
             this.btnProveedor.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnProveedor.Image = global::CpComputadorasG3.Properties.Resources.proveedor;
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(38, 488);
+            this.btnProveedor.Location = new System.Drawing.Point(51, 601);
+            this.btnProveedor.Margin = new System.Windows.Forms.Padding(4);
             this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(158, 42);
+            this.btnProveedor.Size = new System.Drawing.Size(211, 52);
             this.btnProveedor.TabIndex = 11;
             this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,9 +237,10 @@
             this.btnCliente.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCliente.Image = global::CpComputadorasG3.Properties.Resources.Cliente;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(38, 432);
+            this.btnCliente.Location = new System.Drawing.Point(51, 532);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(158, 42);
+            this.btnCliente.Size = new System.Drawing.Size(211, 52);
             this.btnCliente.TabIndex = 9;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -243,13 +257,15 @@
             this.btnVenta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnVenta.Image = global::CpComputadorasG3.Properties.Resources.Venta;
             this.btnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenta.Location = new System.Drawing.Point(38, 375);
+            this.btnVenta.Location = new System.Drawing.Point(51, 462);
+            this.btnVenta.Margin = new System.Windows.Forms.Padding(4);
             this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(158, 42);
+            this.btnVenta.Size = new System.Drawing.Size(211, 52);
             this.btnVenta.TabIndex = 7;
             this.btnVenta.Text = "Ventas";
             this.btnVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVenta.UseVisualStyleBackColor = false;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // btnIngreso
             // 
@@ -262,9 +278,10 @@
             this.btnIngreso.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIngreso.Image = global::CpComputadorasG3.Properties.Resources.Ingreso;
             this.btnIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngreso.Location = new System.Drawing.Point(38, 318);
+            this.btnIngreso.Location = new System.Drawing.Point(51, 391);
+            this.btnIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(158, 42);
+            this.btnIngreso.Size = new System.Drawing.Size(211, 52);
             this.btnIngreso.TabIndex = 5;
             this.btnIngreso.Text = "Ingresos";
             this.btnIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -281,9 +298,10 @@
             this.btnArticulo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnArticulo.Image = global::CpComputadorasG3.Properties.Resources.Articulo;
             this.btnArticulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArticulo.Location = new System.Drawing.Point(38, 262);
+            this.btnArticulo.Location = new System.Drawing.Point(51, 322);
+            this.btnArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.btnArticulo.Name = "btnArticulo";
-            this.btnArticulo.Size = new System.Drawing.Size(158, 42);
+            this.btnArticulo.Size = new System.Drawing.Size(211, 52);
             this.btnArticulo.TabIndex = 3;
             this.btnArticulo.Text = "Artículos";
             this.btnArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -300,9 +318,10 @@
             this.btnCategoria.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCategoria.Image = global::CpComputadorasG3.Properties.Resources.categorias;
             this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoria.Location = new System.Drawing.Point(38, 208);
+            this.btnCategoria.Location = new System.Drawing.Point(51, 256);
+            this.btnCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(158, 42);
+            this.btnCategoria.Size = new System.Drawing.Size(211, 52);
             this.btnCategoria.TabIndex = 1;
             this.btnCategoria.Text = "Categorías";
             this.btnCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -312,9 +331,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CpComputadorasG3.Properties.Resources.Logotipo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 214);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -324,9 +344,10 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRestaurar.Image = global::CpComputadorasG3.Properties.Resources.Restaurar;
-            this.btnRestaurar.Location = new System.Drawing.Point(1232, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(1643, 4);
+            this.btnRestaurar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnRestaurar.Size = new System.Drawing.Size(33, 31);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRestaurar.TabIndex = 3;
             this.btnRestaurar.TabStop = false;
@@ -338,9 +359,10 @@
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = global::CpComputadorasG3.Properties.Resources.Minimizar;
-            this.btnMinimizar.Location = new System.Drawing.Point(1201, 4);
+            this.btnMinimizar.Location = new System.Drawing.Point(1601, 5);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimizar.Size = new System.Drawing.Size(33, 31);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 2;
             this.btnMinimizar.TabStop = false;
@@ -351,9 +373,10 @@
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximizar.Image = global::CpComputadorasG3.Properties.Resources.Maximizar;
-            this.btnMaximizar.Location = new System.Drawing.Point(1232, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(1643, 5);
+            this.btnMaximizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.Size = new System.Drawing.Size(33, 31);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMaximizar.TabIndex = 1;
             this.btnMaximizar.TabStop = false;
@@ -364,9 +387,10 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::CpComputadorasG3.Properties.Resources.Salir;
-            this.btnCerrar.Location = new System.Drawing.Point(1263, 4);
+            this.btnCerrar.Location = new System.Drawing.Point(1684, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.Size = new System.Drawing.Size(33, 31);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
@@ -374,14 +398,15 @@
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.ClientSize = new System.Drawing.Size(1733, 800);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmPrincipal";

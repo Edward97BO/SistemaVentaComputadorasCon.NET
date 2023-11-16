@@ -138,7 +138,7 @@ namespace CpComputadorasG3
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
 
             string nombre = dgvLista.Rows[index].Cells["nombre"].Value.ToString();
-            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Categorría {nombre}?",
+            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Categoría {nombre}?",
                 "::: IT Pro - Mrnsaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
@@ -147,6 +147,11 @@ namespace CpComputadorasG3
                 MessageBox.Show("Categoría eliminada correctamente", "::: It Pro - Mensaje:::",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -57,5 +57,10 @@ namespace CpComputadorasG3
         {
             AbirFrmHijo(new FrmCategoria());
         }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            AbirFrmHijo(new FrmVentas());
+        }
     }
 }
