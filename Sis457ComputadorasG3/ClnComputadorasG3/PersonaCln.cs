@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClnComputadorasG3
 {
-    internal class PersonaCln
+    public class PersonaCln
     {
         public static int insertar(Persona persona)
         {

@@ -101,6 +101,9 @@
     <Compile Include="paPersonaListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="paRolListar_Result.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="paUsuarioListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClnComputadorasG3
 {
-    internal class IngresoCln
+    public class IngresoCln
     {
         public static int insertar(Ingreso ingreso)
         {

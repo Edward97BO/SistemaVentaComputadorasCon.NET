@@ -7,26 +7,28 @@ using System.Threading.Tasks;
 
 namespace ClnComputadorasG3
 {
-    public class CategoriaCln
+    public class DetalleIngresoCln
     {
-        public static int insertar(Categoria categoria)
+        public static int insertar(DetalleIngreso detalleIngreso)
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                context.Categoria.Add(categoria);
+                context.DetalleIngreso.Add(detalleIngreso);
                 context.SaveChanges();
-                return categoria.id;
+                return detalleIngreso.id;
             }
         }
 
-        public static int actualizar(Categoria categoria)
+        public static int actualizar(DetalleIngreso detalleIngreso)
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                var existente = context.Categoria.Find(categoria.id);
-                existente.nombre = categoria.nombre;
-                existente.descripcion = categoria.descripcion;
-                existente.usuarioRegistro = categoria.usuarioRegistro;
+                var existente = context.DetalleIngreso.Find(detalleIngreso.id);
+                existente.idIngreso = detalleIngreso.idIngreso;
+                existente.idArticulo = detalleIngreso.idArticulo;
+                existente.cantidad = detalleIngreso.cantidad;
+                existente.precio = detalleIngreso.precio;
+                existente.usuarioRegistro = detalleIngreso.usuarioRegistro;
                 return context.SaveChanges();
             }
         }
@@ -35,34 +37,34 @@ namespace ClnComputadorasG3
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                var existente = context.Categoria.Find(id);
+                var existente = context.DetalleIngreso.Find(id);
                 existente.estado = -1;
                 existente.usuarioRegistro = usuarioRegistro;
                 return context.SaveChanges();
             }
         }
 
-        public static Categoria get(int id)
+        public static DetalleIngreso get(int id)
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                return context.Categoria.Find(id);
+                return context.DetalleIngreso.Find(id);
             }
         }
 
-        public static List<Categoria> listar()
+        public static List<DetalleIngreso> listar()
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                return context.Categoria.Where(x => x.estado != -1).ToList();
+                return context.DetalleIngreso.Where(x => x.estado != -1).ToList();
             }
         }
 
-        public static List<paCategoriaListar_Result> listarPa(string parametro)
+        public static List<paDetalleIngresoListar_Result> listarPa(string parametro)
         {
             using (var context = new LabComputadorasG3Entities())
             {
-                return context.paCategoriaListar(parametro).ToList();
+                return context.paDetalleIngresoListar(parametro).ToList();
             }
         }
     }

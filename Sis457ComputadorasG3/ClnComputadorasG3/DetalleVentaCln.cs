@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClnComputadorasG3
 {
-    internal class DetalleVentaCln
+    public class DetalleVentaCln
     {
         public static int insertar(DetalleVenta detalleVenta)
         {
@@ -24,8 +24,8 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.DetalleVenta.Find(detalleVenta.id);
-                //existente.idVenta = detalleVenta.idVenta;
-                //existente.idArticulo = detalleVenta.idArticulo;
+                existente.idVenta = detalleVenta.idVenta;
+                existente.idArticulo = detalleVenta.idArticulo;
                 existente.cantidad = detalleVenta.cantidad;
                 existente.precio = detalleVenta.precio;
                 existente.descuento = detalleVenta.descuento;

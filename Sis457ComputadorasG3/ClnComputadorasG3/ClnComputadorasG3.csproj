@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ArticuloCln.cs" />
     <Compile Include="CategoriaCln.cs" />
+    <Compile Include="DetalleIngresoCln.cs" />
     <Compile Include="DetalleVentaCln.cs" />
     <Compile Include="IngresoCln.cs" />
     <Compile Include="PersonaCln.cs" />

@@ -149,6 +149,18 @@ public partial class LabComputadorasG3Entities : DbContext
         return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paDetalleVentaListar_Result>("paDetalleVentaListar", parametroParameter);
     }
 
+
+    public virtual ObjectResult<paRolListar_Result> paRolListar(string parametro)
+    {
+
+        var parametroParameter = parametro != null ?
+            new ObjectParameter("parametro", parametro) :
+            new ObjectParameter("parametro", typeof(string));
+
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paRolListar_Result>("paRolListar", parametroParameter);
+    }
+
 }
 
 }
