@@ -34,3 +34,15 @@ D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadoras
 D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CopyComplete
 D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.dll
 D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.pdb
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.dll.config
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.dll
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\CadComputadorasG3.pdb
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.dll
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.xml
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.AssemblyReference.cache
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CoreCompileInputs.cache
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.csproj.CopyComplete
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.dll
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\obj\Debug\CadComputadorasG3.pdb
