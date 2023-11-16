@@ -89,6 +89,12 @@
     <Compile Include="paCategoriaListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="paDetalleIngresoListar_Result.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="paDetalleVentaListar_Result.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="paIngresoListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
