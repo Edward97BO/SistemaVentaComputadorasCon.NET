@@ -76,5 +76,15 @@ namespace CpComputadorasG3
                 txtContraseña.UseSystemPasswordChar = false;
             }
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            new FrmPrincipal().ShowDialog();
+        }
+
+        private void lblInicioSesion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
