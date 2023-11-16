@@ -24,8 +24,9 @@ namespace CpComputadorasG3
             var ventas = VentaCln.listarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = ventas;
             dgvLista.Columns["id"].Visible = false;
-            dgvLista.Columns["idCliente"].HeaderText = "Id Cliente";
-            dgvLista.Columns["idUsuario"].HeaderText = "Id Usuario";
+            dgvLista.Columns["idCliente"].Visible = false;
+            dgvLista.Columns["idUsuario"].Visible = false;
+            dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["tipoComprobante"].HeaderText = "Tipo de Comprobante";
             dgvLista.Columns["numComprobante"].HeaderText = "Número de Comprobante";
             dgvLista.Columns["total"].HeaderText = "Total";
@@ -37,10 +38,7 @@ namespace CpComputadorasG3
             if (ventas.Count > 0) dgvLista.Rows[0].Cells["nombre"].Selected = true;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
@@ -82,10 +80,7 @@ namespace CpComputadorasG3
             listar();
         }
 
-        private void txtParametro_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private bool validar()
         {
@@ -151,8 +146,8 @@ namespace CpComputadorasG3
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
 
-            string idCliente = dgvLista.Rows[index].Cells["idCliente"].Value.ToString();
-            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Venta {idCliente}?",
+            string numComprobante = dgvLista.Rows[index].Cells["numComprobante"].Value.ToString();
+            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Venta {numComprobante}?",
                 "::: IT Pro - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
@@ -167,5 +162,7 @@ namespace CpComputadorasG3
         {
             if (e.KeyChar == (char)Keys.Enter) listar();
         }
+
+        
     }
 }

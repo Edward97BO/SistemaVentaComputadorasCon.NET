@@ -148,10 +148,5 @@ namespace CpComputadorasG3
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void dgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

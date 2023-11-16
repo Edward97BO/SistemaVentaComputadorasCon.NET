@@ -112,3 +112,6 @@ D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457Computador
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.exe
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.pdb
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmVentas.resources
+D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmArticulo.resources
+D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmCategoria.resources
+D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmVentas.resources
