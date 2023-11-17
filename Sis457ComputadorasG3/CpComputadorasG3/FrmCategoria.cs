@@ -139,7 +139,7 @@ namespace CpComputadorasG3
 
             string nombre = dgvLista.Rows[index].Cells["nombre"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Categoría {nombre}?",
-                "::: IT Pro - Mrnsaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                "::: IT Pro - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {
                 CategoriaCln.eliminar(id, "Edward");

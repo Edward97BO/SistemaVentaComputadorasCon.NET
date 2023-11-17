@@ -325,6 +325,7 @@
             this.btnArticulo.Text = "Artículos";
             this.btnArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnArticulo.UseVisualStyleBackColor = false;
+            this.btnArticulo.Click += new System.EventHandler(this.btnArticulo_Click);
             // 
             // panel1
             // 
