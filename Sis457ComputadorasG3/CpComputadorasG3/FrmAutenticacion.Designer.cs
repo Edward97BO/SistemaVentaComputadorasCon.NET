@@ -70,7 +70,7 @@
             // 
             this.lblGuion.AutoSize = true;
             this.lblGuion.BackColor = System.Drawing.Color.Black;
-            this.lblGuion.ForeColor = System.Drawing.Color.DimGray;
+            this.lblGuion.ForeColor = System.Drawing.Color.White;
             this.lblGuion.Location = new System.Drawing.Point(222, 104);
             this.lblGuion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGuion.Name = "lblGuion";
@@ -78,21 +78,19 @@
             this.lblGuion.TabIndex = 1;
             this.lblGuion.Text = "---------------------------------------------------------------------------------" +
     "------------------------------";
-            this.lblGuion.Click += new System.EventHandler(this.lblGuion_Click);
             // 
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(224, 88);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(336, 20);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "USUARIO:";
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
@@ -101,14 +99,14 @@
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(224, 142);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(336, 20);
             this.txtContraseña.TabIndex = 4;
             this.txtContraseña.Text = "CONTRASEÑA:";
-            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
@@ -116,7 +114,7 @@
             // 
             this.lblGuioness.AutoSize = true;
             this.lblGuioness.BackColor = System.Drawing.Color.Black;
-            this.lblGuioness.ForeColor = System.Drawing.Color.DimGray;
+            this.lblGuioness.ForeColor = System.Drawing.Color.White;
             this.lblGuioness.Location = new System.Drawing.Point(222, 157);
             this.lblGuioness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGuioness.Name = "lblGuioness";
@@ -178,7 +176,6 @@
             this.lblInicioSesion.Size = new System.Drawing.Size(173, 33);
             this.lblInicioSesion.TabIndex = 8;
             this.lblInicioSesion.Text = "BIENVENIDO";
-            this.lblInicioSesion.Click += new System.EventHandler(this.lblInicioSesion_Click);
             // 
             // FrmAutenticacion
             // 
@@ -199,7 +196,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmAutenticacion";
-            this.Opacity = 0.8D;
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAutenticacion";
             this.pnlLogo.ResumeLayout(false);

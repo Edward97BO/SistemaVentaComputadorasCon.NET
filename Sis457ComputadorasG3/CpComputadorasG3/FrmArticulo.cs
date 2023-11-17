@@ -26,7 +26,7 @@ namespace CpComputadorasG3
             dgvLista.DataSource = articulos;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
-            dgvLista.Columns["idCategoria"].HeaderText = "Categoría";
+            dgvLista.Columns["idCategoria"].Visible= false;
             dgvLista.Columns["codigo"].HeaderText = "Código";
             dgvLista.Columns["nombre"].HeaderText = "Nombre";
             dgvLista.Columns["precioVenta"].HeaderText = "Precio";

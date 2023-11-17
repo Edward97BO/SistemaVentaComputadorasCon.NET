@@ -67,5 +67,10 @@ namespace CpComputadorasG3
         {
             AbirFrmHijo(new FrmArticulo());
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            AbirFrmHijo(new FrmUsuario());
+        }
     }
 }

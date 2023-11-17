@@ -116,3 +116,4 @@ D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG
 D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmCategoria.resources
 D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmVentas.resources
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmVentas.resources
+D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\CpComputadorasG3\obj\Debug\CpComputadorasG3.FrmUsuario.resources

@@ -36,16 +36,16 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnIngreso = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnEmpleado = new System.Windows.Forms.Button();
+            this.btnUsuario = new System.Windows.Forms.Button();
+            this.btnVenta = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVenta = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnIngreso = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnArticulo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -142,16 +142,16 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.pnlMenu.Controls.Add(this.btnIngreso);
+            this.pnlMenu.Controls.Add(this.panel3);
             this.pnlMenu.Controls.Add(this.panel7);
-            this.pnlMenu.Controls.Add(this.btnEmpleado);
+            this.pnlMenu.Controls.Add(this.btnUsuario);
+            this.pnlMenu.Controls.Add(this.btnVenta);
+            this.pnlMenu.Controls.Add(this.panel4);
             this.pnlMenu.Controls.Add(this.panel6);
             this.pnlMenu.Controls.Add(this.btnProveedor);
             this.pnlMenu.Controls.Add(this.panel5);
             this.pnlMenu.Controls.Add(this.btnCliente);
-            this.pnlMenu.Controls.Add(this.panel4);
-            this.pnlMenu.Controls.Add(this.btnVenta);
-            this.pnlMenu.Controls.Add(this.panel3);
-            this.pnlMenu.Controls.Add(this.btnIngreso);
             this.pnlMenu.Controls.Add(this.panel2);
             this.pnlMenu.Controls.Add(this.btnArticulo);
             this.pnlMenu.Controls.Add(this.panel1);
@@ -163,37 +163,93 @@
             this.pnlMenu.Size = new System.Drawing.Size(220, 615);
             this.pnlMenu.TabIndex = 1;
             // 
+            // btnIngreso
+            // 
+            this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIngreso.FlatAppearance.BorderSize = 0;
+            this.btnIngreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIngreso.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngreso.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIngreso.Image = global::CpComputadorasG3.Properties.Resources.Ingreso;
+            this.btnIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIngreso.Location = new System.Drawing.Point(38, 436);
+            this.btnIngreso.Name = "btnIngreso";
+            this.btnIngreso.Size = new System.Drawing.Size(158, 42);
+            this.btnIngreso.TabIndex = 5;
+            this.btnIngreso.Text = "Ingresos";
+            this.btnIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIngreso.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel3.Location = new System.Drawing.Point(22, 436);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 41);
+            this.panel3.TabIndex = 6;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(22, 545);
+            this.panel7.Location = new System.Drawing.Point(22, 321);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 41);
             this.panel7.TabIndex = 14;
             // 
-            // btnEmpleado
+            // btnUsuario
             // 
-            this.btnEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpleado.FlatAppearance.BorderSize = 0;
-            this.btnEmpleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpleado.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEmpleado.Image = global::CpComputadorasG3.Properties.Resources.empleado;
-            this.btnEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleado.Location = new System.Drawing.Point(38, 545);
-            this.btnEmpleado.Name = "btnEmpleado";
-            this.btnEmpleado.Size = new System.Drawing.Size(158, 42);
-            this.btnEmpleado.TabIndex = 13;
-            this.btnEmpleado.Text = "Empleados";
-            this.btnEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmpleado.UseVisualStyleBackColor = false;
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuario.FlatAppearance.BorderSize = 0;
+            this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUsuario.Image = global::CpComputadorasG3.Properties.Resources.empleado;
+            this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.Location = new System.Drawing.Point(38, 321);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(158, 42);
+            this.btnUsuario.TabIndex = 13;
+            this.btnUsuario.Text = "Usuarios";
+            this.btnUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsuario.UseVisualStyleBackColor = false;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
+            // 
+            // btnVenta
+            // 
+            this.btnVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVenta.FlatAppearance.BorderSize = 0;
+            this.btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVenta.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnVenta.Image = global::CpComputadorasG3.Properties.Resources.Venta;
+            this.btnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVenta.Location = new System.Drawing.Point(38, 378);
+            this.btnVenta.Name = "btnVenta";
+            this.btnVenta.Size = new System.Drawing.Size(158, 42);
+            this.btnVenta.TabIndex = 7;
+            this.btnVenta.Text = "Ventas";
+            this.btnVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVenta.UseVisualStyleBackColor = false;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel4.Location = new System.Drawing.Point(22, 378);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 41);
+            this.panel4.TabIndex = 8;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(22, 488);
+            this.panel6.Location = new System.Drawing.Point(22, 557);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(10, 41);
             this.panel6.TabIndex = 12;
@@ -209,7 +265,7 @@
             this.btnProveedor.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnProveedor.Image = global::CpComputadorasG3.Properties.Resources.proveedor;
             this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(38, 488);
+            this.btnProveedor.Location = new System.Drawing.Point(38, 557);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(158, 42);
             this.btnProveedor.TabIndex = 11;
@@ -220,7 +276,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(22, 432);
+            this.panel5.Location = new System.Drawing.Point(22, 501);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 41);
             this.panel5.TabIndex = 10;
@@ -236,68 +292,13 @@
             this.btnCliente.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCliente.Image = global::CpComputadorasG3.Properties.Resources.Cliente;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(38, 432);
+            this.btnCliente.Location = new System.Drawing.Point(38, 501);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(158, 42);
             this.btnCliente.TabIndex = 9;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCliente.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(22, 375);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 41);
-            this.panel4.TabIndex = 8;
-            // 
-            // btnVenta
-            // 
-            this.btnVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnVenta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVenta.FlatAppearance.BorderSize = 0;
-            this.btnVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVenta.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenta.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnVenta.Image = global::CpComputadorasG3.Properties.Resources.Venta;
-            this.btnVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenta.Location = new System.Drawing.Point(38, 375);
-            this.btnVenta.Name = "btnVenta";
-            this.btnVenta.Size = new System.Drawing.Size(158, 42);
-            this.btnVenta.TabIndex = 7;
-            this.btnVenta.Text = "Ventas";
-            this.btnVenta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVenta.UseVisualStyleBackColor = false;
-            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(22, 318);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 41);
-            this.panel3.TabIndex = 6;
-            // 
-            // btnIngreso
-            // 
-            this.btnIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnIngreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIngreso.FlatAppearance.BorderSize = 0;
-            this.btnIngreso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnIngreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngreso.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnIngreso.Image = global::CpComputadorasG3.Properties.Resources.Ingreso;
-            this.btnIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngreso.Location = new System.Drawing.Point(38, 318);
-            this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(158, 42);
-            this.btnIngreso.TabIndex = 5;
-            this.btnIngreso.Text = "Ingresos";
-            this.btnIngreso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIngreso.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -421,7 +422,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnEmpleado;
+        private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.Label lblTitulo;
     }

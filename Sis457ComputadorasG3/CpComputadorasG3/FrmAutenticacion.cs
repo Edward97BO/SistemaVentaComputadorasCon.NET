@@ -17,11 +17,6 @@ namespace CpComputadorasG3
             InitializeComponent();
         }
 
-        private void lblGuion_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,15 +27,6 @@ namespace CpComputadorasG3
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {

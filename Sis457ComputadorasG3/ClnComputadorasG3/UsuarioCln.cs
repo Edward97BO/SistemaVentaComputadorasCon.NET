@@ -24,7 +24,7 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.Usuario.Find(usuario.id);
-                existente.idRol = usuario.idRol;
+                //existente.idRol = usuario.idRol;
                 existente.nombre = usuario.nombre;
                 existente.tipoDocumento = usuario.tipoDocumento;
                 existente.numDocumento = usuario.numDocumento;
