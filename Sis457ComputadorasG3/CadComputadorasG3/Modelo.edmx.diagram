@@ -6,24 +6,24 @@
     <edmx:Diagrams>
       <Diagram DiagramId="87ebf0f4c78d4ed0a75e6e91a41e7cb0" Name="Diagram1">
         <EntityTypeShape EntityType="LabComputadorasG3Model.Articulo" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabComputadorasG3Model.Categoria" Width="1.5" PointX="3.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabComputadorasG3Model.DetalleIngreso" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabComputadorasG3Model.DetalleVenta" Width="1.5" PointX="11.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabComputadorasG3Model.Categoria" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LabComputadorasG3Model.Ingreso" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="LabComputadorasG3Model.Persona" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LabComputadorasG3Model.Rol" Width="1.5" PointX="1.5" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LabComputadorasG3Model.Usuario" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="LabComputadorasG3Model.Venta" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Articulo__idCate__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleIn__idArt__46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleVe__idArt__4E88ABD4" ManuallyRouted="false" />
-        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleIn__idIng__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleVe__idVen__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Ingreso__idProve__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Ingreso__idUsuar__4316F928" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Venta__idCliente__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Usuario__email__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Venta__idUsuario__4AB81AF0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LabComputadorasG3Model.DetalleIngreso" Width="1.5" PointX="8.25" PointY="6.5" />
+        <EntityTypeShape EntityType="LabComputadorasG3Model.DetalleVenta" Width="1.5" PointX="11.25" PointY="6.375" />
+        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleIn__idArt__503BEA1C" />
+        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleVe__idArt__540C7B00" />
+        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleIn__idIng__4F47C5E3" />
+        <AssociationConnector Association="LabComputadorasG3Model.FK__DetalleVe__idVen__531856C7" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

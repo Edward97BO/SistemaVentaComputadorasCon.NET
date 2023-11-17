@@ -39,10 +39,6 @@ public partial class LabComputadorasG3Entities : DbContext
 
     public virtual DbSet<Categoria> Categoria { get; set; }
 
-    public virtual DbSet<DetalleIngreso> DetalleIngreso { get; set; }
-
-    public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
-
     public virtual DbSet<Ingreso> Ingreso { get; set; }
 
     public virtual DbSet<Persona> Persona { get; set; }
@@ -52,6 +48,10 @@ public partial class LabComputadorasG3Entities : DbContext
     public virtual DbSet<Usuario> Usuario { get; set; }
 
     public virtual DbSet<Venta> Venta { get; set; }
+
+    public virtual DbSet<DetalleIngreso> DetalleIngreso { get; set; }
+
+    public virtual DbSet<DetalleVenta> DetalleVenta { get; set; }
 
 
     public virtual ObjectResult<paArticuloListar_Result> paArticuloListar(string parametro)

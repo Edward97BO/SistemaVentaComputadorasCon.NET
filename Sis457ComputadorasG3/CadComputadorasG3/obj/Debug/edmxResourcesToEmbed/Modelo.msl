@@ -29,35 +29,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DetalleIngreso">
-      <EntityTypeMapping TypeName="LabComputadorasG3Model.DetalleIngreso">
-        <MappingFragment StoreEntitySet="DetalleIngreso">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idIngreso" ColumnName="idIngreso" />
-          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="DetalleVenta">
-      <EntityTypeMapping TypeName="LabComputadorasG3Model.DetalleVenta">
-        <MappingFragment StoreEntitySet="DetalleVenta">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
-          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="descuento" ColumnName="descuento" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Ingreso">
       <EntityTypeMapping TypeName="LabComputadorasG3Model.Ingreso">
         <MappingFragment StoreEntitySet="Ingreso">
@@ -105,6 +76,7 @@
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="LabComputadorasG3Model.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="clave" ColumnName="clave" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="idRol" ColumnName="idRol" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
@@ -226,5 +198,75 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paDetalleIngresoListar" FunctionName="LabComputadorasG3Model.Store.paDetalleIngresoListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabComputadorasG3Model.paDetalleIngresoListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idIngreso" ColumnName="idIngreso" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paDetalleVentaListar" FunctionName="LabComputadorasG3Model.Store.paDetalleVentaListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabComputadorasG3Model.paDetalleVentaListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paRolListar" FunctionName="LabComputadorasG3Model.Store.paRolListar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LabComputadorasG3Model.paRolListar_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DetalleIngreso">
+      <EntityTypeMapping TypeName="LabComputadorasG3Model.DetalleIngreso">
+        <MappingFragment StoreEntitySet="DetalleIngreso">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="idIngreso" ColumnName="idIngreso" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVenta">
+      <EntityTypeMapping TypeName="LabComputadorasG3Model.DetalleVenta">
+        <MappingFragment StoreEntitySet="DetalleVenta">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

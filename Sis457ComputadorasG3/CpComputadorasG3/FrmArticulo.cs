@@ -71,7 +71,7 @@ namespace CpComputadorasG3
             txtNombre.Text = articulo.nombre;
             txtDescripcion.Text = articulo.descripcion;
             nudPrecioVenta.Value = articulo.precioVenta;
-            nudStock.Value = articulo.stock;
+            nudStock.Value = (decimal)articulo.stock;
             txtDescripcion.Text =articulo.descripcion;
         }
 
@@ -146,6 +146,7 @@ namespace CpComputadorasG3
                 articulo.nombre = txtNombre.Text.Trim();
                 articulo.precioVenta = nudPrecioVenta.Value;
                 articulo.stock = (int)nudStock.Value;
+                articulo.descripcion = txtDescripcion.Text.Trim();
                 articulo.usuarioRegistro = "Edward";
                 if (esNuevo)
                 {
@@ -172,6 +173,7 @@ namespace CpComputadorasG3
             txtNombre.Text = string.Empty;
             nudPrecioVenta.Value = 0;
             nudStock.Value = 0;
+            txtDescripcion.Text = string.Empty;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

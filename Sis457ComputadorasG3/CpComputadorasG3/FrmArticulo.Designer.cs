@@ -281,6 +281,7 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigo.Location = new System.Drawing.Point(20, 57);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(233, 29);
@@ -360,9 +361,9 @@
             this.lblBusqueda.ForeColor = System.Drawing.SystemColors.Control;
             this.lblBusqueda.Location = new System.Drawing.Point(23, 86);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(253, 19);
+            this.lblBusqueda.Size = new System.Drawing.Size(263, 19);
             this.lblBusqueda.TabIndex = 10;
-            this.lblBusqueda.Text = "Buscar por código de artículo:";
+            this.lblBusqueda.Text = "Buscar por nombre de artículo:";
             // 
             // txtParametro
             // 

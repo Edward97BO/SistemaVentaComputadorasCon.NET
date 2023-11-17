@@ -24,7 +24,6 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.Articulo.Find(articulo.id);
-                existente.idCategoria = articulo.idCategoria;
                 existente.codigo = articulo.codigo;
                 existente.nombre = articulo.nombre;
                 existente.precioVenta = articulo.precioVenta;

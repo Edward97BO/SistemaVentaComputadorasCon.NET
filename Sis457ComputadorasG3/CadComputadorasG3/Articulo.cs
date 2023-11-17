@@ -39,7 +39,7 @@ public partial class Articulo
 
     public decimal precioVenta { get; set; }
 
-    public int stock { get; set; }
+    public Nullable<int> stock { get; set; }
 
     public string descripcion { get; set; }
 
