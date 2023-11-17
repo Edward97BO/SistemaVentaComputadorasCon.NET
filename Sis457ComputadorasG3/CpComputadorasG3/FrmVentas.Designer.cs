@@ -70,10 +70,10 @@
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(38, 136);
-            this.txtParametro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtParametro.Location = new System.Drawing.Point(51, 167);
+            this.txtParametro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtParametro.Name = "txtParametro";
-            this.txtParametro.Size = new System.Drawing.Size(576, 20);
+            this.txtParametro.Size = new System.Drawing.Size(767, 22);
             this.txtParametro.TabIndex = 2;
             this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
@@ -87,9 +87,10 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCerrar.Image = global::CpComputadorasG3.Properties.Resources.Cerrar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(566, 15);
+            this.btnCerrar.Location = new System.Drawing.Point(755, 18);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(135, 66);
+            this.btnCerrar.Size = new System.Drawing.Size(180, 81);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -107,9 +108,10 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEliminar.Image = global::CpComputadorasG3.Properties.Resources.Eliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(370, 15);
+            this.btnEliminar.Location = new System.Drawing.Point(493, 18);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(151, 66);
+            this.btnEliminar.Size = new System.Drawing.Size(201, 81);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,9 +128,10 @@
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnEditar.Image = global::CpComputadorasG3.Properties.Resources.Editar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(191, 15);
+            this.btnEditar.Location = new System.Drawing.Point(255, 18);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(131, 66);
+            this.btnEditar.Size = new System.Drawing.Size(175, 81);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -145,9 +148,10 @@
             this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnNuevo.Image = global::CpComputadorasG3.Properties.Resources.Nuevo;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(16, 15);
+            this.btnNuevo.Location = new System.Drawing.Point(21, 18);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(131, 66);
+            this.btnNuevo.Size = new System.Drawing.Size(175, 81);
             this.btnNuevo.TabIndex = 7;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,9 +168,10 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnBuscar.Image = global::CpComputadorasG3.Properties.Resources.Busca;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(630, 110);
+            this.btnBuscar.Location = new System.Drawing.Point(840, 135);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(122, 66);
+            this.btnBuscar.Size = new System.Drawing.Size(163, 81);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,10 +183,9 @@
             this.lblTipoComprobante.AutoSize = true;
             this.lblTipoComprobante.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoComprobante.ForeColor = System.Drawing.Color.White;
-            this.lblTipoComprobante.Location = new System.Drawing.Point(18, 52);
-            this.lblTipoComprobante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTipoComprobante.Location = new System.Drawing.Point(24, 64);
             this.lblTipoComprobante.Name = "lblTipoComprobante";
-            this.lblTipoComprobante.Size = new System.Drawing.Size(208, 22);
+            this.lblTipoComprobante.Size = new System.Drawing.Size(253, 27);
             this.lblTipoComprobante.TabIndex = 12;
             this.lblTipoComprobante.Text = "Tipo de Comprobante";
             // 
@@ -190,10 +194,9 @@
             this.lblNumComprobante.AutoSize = true;
             this.lblNumComprobante.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumComprobante.ForeColor = System.Drawing.Color.White;
-            this.lblNumComprobante.Location = new System.Drawing.Point(18, 142);
-            this.lblNumComprobante.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumComprobante.Location = new System.Drawing.Point(24, 175);
             this.lblNumComprobante.Name = "lblNumComprobante";
-            this.lblNumComprobante.Size = new System.Drawing.Size(240, 22);
+            this.lblNumComprobante.Size = new System.Drawing.Size(294, 27);
             this.lblNumComprobante.TabIndex = 13;
             this.lblNumComprobante.Text = "Número de Comprobante";
             // 
@@ -202,27 +205,28 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(18, 236);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotal.Location = new System.Drawing.Point(24, 290);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(56, 22);
+            this.lblTotal.Size = new System.Drawing.Size(68, 27);
             this.lblTotal.TabIndex = 14;
             this.lblTotal.Text = "Total";
             // 
             // txtTipoComprobante
             // 
-            this.txtTipoComprobante.Location = new System.Drawing.Point(22, 89);
-            this.txtTipoComprobante.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTipoComprobante.Location = new System.Drawing.Point(29, 110);
+            this.txtTipoComprobante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTipoComprobante.MaxLength = 20;
             this.txtTipoComprobante.Name = "txtTipoComprobante";
-            this.txtTipoComprobante.Size = new System.Drawing.Size(234, 29);
+            this.txtTipoComprobante.Size = new System.Drawing.Size(311, 35);
             this.txtTipoComprobante.TabIndex = 17;
             // 
             // txtNumComprobante
             // 
-            this.txtNumComprobante.Location = new System.Drawing.Point(22, 190);
-            this.txtNumComprobante.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNumComprobante.Location = new System.Drawing.Point(29, 234);
+            this.txtNumComprobante.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumComprobante.MaxLength = 20;
             this.txtNumComprobante.Name = "txtNumComprobante";
-            this.txtNumComprobante.Size = new System.Drawing.Size(234, 29);
+            this.txtNumComprobante.Size = new System.Drawing.Size(311, 35);
             this.txtNumComprobante.TabIndex = 19;
             // 
             // erpIdCliente
@@ -255,9 +259,10 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnCancelar.Image = global::CpComputadorasG3.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(70, 488);
+            this.btnCancelar.Location = new System.Drawing.Point(93, 601);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(151, 66);
+            this.btnCancelar.Size = new System.Drawing.Size(201, 81);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -274,9 +279,10 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.btnGuardar.Image = global::CpComputadorasG3.Properties.Resources.Guardar;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(70, 404);
+            this.btnGuardar.Location = new System.Drawing.Point(93, 497);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(151, 66);
+            this.btnGuardar.Size = new System.Drawing.Size(201, 81);
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -285,10 +291,10 @@
             // 
             // nudTotal
             // 
-            this.nudTotal.Location = new System.Drawing.Point(22, 272);
-            this.nudTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.nudTotal.Location = new System.Drawing.Point(29, 335);
+            this.nudTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudTotal.Name = "nudTotal";
-            this.nudTotal.Size = new System.Drawing.Size(122, 29);
+            this.nudTotal.Size = new System.Drawing.Size(163, 35);
             this.nudTotal.TabIndex = 23;
             // 
             // pnlDatos
@@ -296,9 +302,10 @@
             this.pnlDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.pnlDatos.Controls.Add(this.gbxDatos);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDatos.Location = new System.Drawing.Point(778, 0);
+            this.pnlDatos.Location = new System.Drawing.Point(1037, 0);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(302, 615);
+            this.pnlDatos.Size = new System.Drawing.Size(403, 757);
             this.pnlDatos.TabIndex = 24;
             this.pnlDatos.Visible = false;
             // 
@@ -314,20 +321,23 @@
             this.gbxDatos.Controls.Add(this.txtNumComprobante);
             this.gbxDatos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbxDatos.Location = new System.Drawing.Point(16, 12);
+            this.gbxDatos.Location = new System.Drawing.Point(21, 15);
+            this.gbxDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(274, 591);
+            this.gbxDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxDatos.Size = new System.Drawing.Size(365, 727);
             this.gbxDatos.TabIndex = 0;
             this.gbxDatos.TabStop = false;
-            this.gbxDatos.Text = "Datos de la Categoría:";
+            this.gbxDatos.Text = "Datos de la Venta:";
             // 
             // lblVentas
             // 
             this.lblVentas.Font = new System.Drawing.Font("Cooper Black", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVentas.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblVentas.Location = new System.Drawing.Point(2, 29);
+            this.lblVentas.Location = new System.Drawing.Point(3, 36);
+            this.lblVentas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVentas.Name = "lblVentas";
-            this.lblVentas.Size = new System.Drawing.Size(770, 47);
+            this.lblVentas.Size = new System.Drawing.Size(1027, 58);
             this.lblVentas.TabIndex = 25;
             this.lblVentas.Text = "VENTAS";
             this.lblVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -337,9 +347,10 @@
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBusqueda.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblBusqueda.Location = new System.Drawing.Point(34, 101);
+            this.lblBusqueda.Location = new System.Drawing.Point(45, 124);
+            this.lblBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(310, 19);
+            this.lblBusqueda.Size = new System.Drawing.Size(385, 23);
             this.lblBusqueda.TabIndex = 26;
             this.lblBusqueda.Text = "Buscar por número de Comprobante:";
             // 
@@ -348,12 +359,12 @@
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLista.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(28, 33);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvLista.Location = new System.Drawing.Point(37, 41);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.RowHeadersWidth = 51;
             this.dgvLista.RowTemplate.Height = 24;
-            this.dgvLista.Size = new System.Drawing.Size(663, 180);
+            this.dgvLista.Size = new System.Drawing.Size(884, 222);
             this.dgvLista.TabIndex = 8;
             // 
             // gbxLista
@@ -361,9 +372,11 @@
             this.gbxLista.Controls.Add(this.dgvLista);
             this.gbxLista.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxLista.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.gbxLista.Location = new System.Drawing.Point(37, 202);
+            this.gbxLista.Location = new System.Drawing.Point(49, 249);
+            this.gbxLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(715, 229);
+            this.gbxLista.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxLista.Size = new System.Drawing.Size(953, 282);
             this.gbxLista.TabIndex = 28;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de Ventas";
@@ -374,17 +387,18 @@
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
-            this.pnlAcciones.Location = new System.Drawing.Point(38, 457);
+            this.pnlAcciones.Location = new System.Drawing.Point(51, 562);
+            this.pnlAcciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(715, 99);
+            this.pnlAcciones.Size = new System.Drawing.Size(953, 122);
             this.pnlAcciones.TabIndex = 7;
             // 
             // FrmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(1080, 615);
+            this.ClientSize = new System.Drawing.Size(1440, 757);
             this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.lblBusqueda);
             this.Controls.Add(this.lblVentas);
@@ -393,7 +407,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pnlAcciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVentas";
