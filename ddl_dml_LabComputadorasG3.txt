@@ -1,0 +1,333 @@
+CREATE DATABASE LabComputadorasG3;
+
+USE LabComputadorasG3;
+
+DROP TABLE Categoria;
+DROP TABLE Articulo;
+DROP TABLE Persona;
+DROP TABLE Rol;
+DROP TABLE Usuario;
+DROP TABLE Ingreso;
+DROP TABLE DetalleIngreso;
+DROP TABLE Venta;
+DROP TABLE DetalleVenta;
+
+CREATE TABLE Categoria (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	nombre VARCHAR (50) NOT NULL,
+	descripcion VARCHAR (500) NOT NULL,
+)
+
+CREATE TABLE Articulo (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idCategoria INT NOT NULL,
+	codigo VARCHAR (50) NOT NULL,
+	nombre VARCHAR ( 100) NOT NULL,
+	precioVenta DECIMAL (11,2) NOT NULL,
+	stock INT NOT NULL,
+	descripcion VARCHAR (500) NOT NULL,
+	FOREIGN KEY (idCategoria) REFERENCES Categoria (id)
+)
+
+CREATE TABLE Persona (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	tipoPersona VARCHAR (20) NOT NULL,
+	nombre VARCHAR (100) NOT NULL,
+	tipoDocumento VARCHAR (20) NOT NULL,
+	numDocumento VARCHAR (20) NOT NULL,
+	direccion VARCHAR (70) NOT NULL,
+	telefono VARCHAR (20) NOT NULL,
+	email VARCHAR (50) NOT NULL
+)
+
+CREATE TABLE Rol (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	nombre VARCHAR (30) NOT NULL,
+	descripcion VARCHAR (500) NOT NULL,
+	)
+
+CREATE TABLE Usuario (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idRol INT NOT NULL,
+	nombre VARCHAR (100) NOT NULL,
+	tipoDocumento VARCHAR (20) NOT NULL,
+	numDocumento VARCHAR (20) NOT NULL,
+	direccion VARCHAR (70) NOT NULL,
+	telefono VARCHAR (20) NOT NULL,
+	email VARCHAR (50) NOT NULL,
+	clave VARCHAR (50) NOT NULL,
+	FOREIGN KEY (idRol) REFERENCES Rol (id)
+)
+
+CREATE TABLE Ingreso (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idProveedor INT NOT NULL,
+	idUsuario INT NOT NULL,
+	tipoComprobante VARCHAR (20) NOT NULL,
+	numComprobante VARCHAR (10) NOT NULL,
+	total DECIMAL (11,2) NOT NULL,
+	FOREIGN KEY (idProveedor) REFERENCES Persona (id),
+	FOREIGN KEY (idUsuario) REFERENCES Usuario (id),
+)
+
+CREATE TABLE DetalleIngreso (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idIngreso INT NOT NULL,
+	idArticulo INT NOT NULL,
+	cantidad INT NOT NULL,
+	precio DECIMAL (11,2) NOT NULL,
+	FOREIGN KEY (idIngreso) REFERENCES Ingreso (id) ON DELETE CASCADE,
+	FOREIGN KEY (idArticulo) REFERENCES Articulo (id),
+)
+
+CREATE TABLE Venta (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idCliente INT NOT NULL,
+	idUsuario INT NOT NULL,
+	tipoComprobante VARCHAR (20) NOT NULL,
+	numComprobante VARCHAR (10) NOT NULL,
+	total DECIMAL (11,2) NOT NULL,
+	FOREIGN KEY (idCliente) REFERENCES Persona (id),
+	FOREIGN KEY (idUsuario) REFERENCES Usuario (id),
+)
+
+CREATE TABLE DetalleVenta (
+	id INT NOT NULL PRIMARY KEY IDENTITY (1,1),
+	idVenta INT NOT NULL,
+	idArticulo INT NOT NULL,
+	cantidad INT NOT NULL,
+	precio DECIMAL (11,2) NOT NULL,
+	descuento DECIMAL (11,2) NOT NULL,
+	FOREIGN KEY (idVenta) REFERENCES Venta (id) ON DELETE CASCADE,
+	FOREIGN KEY (idArticulo) REFERENCES Articulo (id),
+)
+
+ALTER TABLE Categoria ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Categoria ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Categoria ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Articulo ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Articulo ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Articulo ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Persona ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Persona ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Persona ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Rol ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Rol ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Rol ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Usuario ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Usuario ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Usuario ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Ingreso ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Ingreso ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Ingreso ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE DetalleIngreso ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE DetalleIngreso ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE DetalleIngreso ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE Venta ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Venta ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Venta ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+ALTER TABLE DetalleVenta ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE DetalleVenta ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE DetalleVenta ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminación lógica, 0: Inactivo, 1: Activo
+
+
+ALTER TABLE Articulo ADD CONSTRAINT fk_Articulo_Categoria FOREIGN KEY(idCategoria) REFERENCES Categoria(id)
+
+ALTER TABLE Usuario ADD CONSTRAINT fk_Usuario_Rol FOREIGN KEY(idRol) REFERENCES Rol(id)
+
+
+ALTER TABLE Ingreso ADD CONSTRAINT fk_Inreso_Persona FOREIGN KEY(idProveedor) REFERENCES Persona(id)
+ALTER TABLE Ingreso ADD CONSTRAINT fk_Ingreso_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id)
+
+
+ALTER TABLE DetalleIngreso ADD CONSTRAINT fk_DetalleIngreso_Ingreso FOREIGN KEY(idIngreso) REFERENCES Ingreso(id)
+ALTER TABLE DetalleIngreso ADD CONSTRAINT fk_DetalleIngreso_Articulo FOREIGN KEY(idArticulo) REFERENCES Articulo(id)
+
+
+ALTER TABLE Venta ADD CONSTRAINT fk_Venta_Persona FOREIGN KEY(idCliente) REFERENCES Persona(id)
+ALTER TABLE Venta ADD CONSTRAINT fk_Venta_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id)
+
+
+ALTER TABLE DetalleVenta ADD CONSTRAINT fk_DetalleVenta_Articulo FOREIGN KEY(idArticulo) REFERENCES Articulo(id)
+ALTER TABLE DetalleVenta ADD CONSTRAINT fk_DetalleVenta_Venta FOREIGN KEY(idVenta) REFERENCES Persona(id)
+
+
+ALTER PROC paCategoriaListar @parametro VARCHAR(50)
+AS
+  SELECT id,nombre, descripcion,usuarioRegistro,fechaRegistro,estado 
+  FROM Categoria
+  WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+CREATE PROC paArticuloListar @parametro VARCHAR(50)
+AS
+  SELECT id,idCategoria, codigo, nombre, precioVenta, stock, descripcion, usuarioRegistro,fechaRegistro,estado 
+  FROM Articulo
+  WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+  CREATE PROC paPersonaListar @parametro VARCHAR(50)
+AS
+  SELECT id,tipoPersona, nombre, tipoDocumento, numDocumento, direccion, telefono, email, usuarioRegistro,fechaRegistro,estado 
+  FROM Persona
+  WHERE estado<>-1 AND tipoPersona LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+    CREATE PROC paUsuarioListar @parametro VARCHAR(50)
+AS
+  SELECT id,idRol, nombre, tipoDocumento, numDocumento, direccion, telefono, email, usuarioRegistro,fechaRegistro,estado,clave  
+  FROM Usuario
+  WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+  CREATE PROC paIngresoListar @parametro VARCHAR(50)
+AS
+  SELECT id,idProveedor, idUsuario, tipoComprobante, numComprobante, total, usuarioRegistro,fechaRegistro,estado 
+  FROM Ingreso
+  WHERE estado<>-1 AND numComprobante LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+   CREATE PROC paVentaListar @parametro VARCHAR(50)
+AS
+  SELECT id, idCliente, idUsuario, tipoComprobante, numComprobante, total, usuarioRegistro,fechaRegistro,estado 
+  FROM Venta
+  WHERE estado<>-1 AND numComprobante LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+CREATE PROC paDetalleVentaListar @parametro VARCHAR(50)
+AS
+  SELECT id,idVenta, idArticulo, cantidad, precio, descuento, usuarioRegistro,fechaRegistro,estado 
+  FROM DetalleVenta
+  WHERE estado<>-1 AND idVenta LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+  CREATE PROC paDetalleIngresoListar @parametro VARCHAR(50)
+AS
+  SELECT id,idIngreso, idArticulo, cantidad, precio, usuarioRegistro,fechaRegistro,estado 
+  FROM DetalleIngreso
+  WHERE estado<>-1 AND idIngreso LIKE '%'+REPLACE(@parametro,' ','%')+'%';
+
+
+-- Inserta una categoría para computadoras de escritorio
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Computadoras de escritorio', 'Computadoras de escritorio para uso general, juegos y trabajo');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Computadoras portátiles', 'Computadoras portátiles para uso personal, trabajo y juegos');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Accesorios para computadoras', 'Accesorios para computadoras, como monitores, teclados, ratones, etc.');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Sillas gamer', 'Sillas diseñadas para jugadores, con características ergonómicas y de apoyo');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Monitores gaming', 'Monitores diseñados para juegos, con altas tasas de refresco y resoluciones');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Teclados gaming', 'Teclados diseñados para juegos, con características como teclas macro y retroiluminación');
+
+INSERT INTO Categoria (nombre, descripcion) VALUES
+('Ratones gaming', 'Ratones diseñados para juegos, con características como sensores de alta precisión y botones programables');
+
+
+-- Inserta un artículo de computadora de escritorio
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(1, 'COM-001', 'Computadora de escritorio Gamer', 1200.00, 10, 'Computadora de escritorio con procesador Intel Core i7, 16 GB de RAM y tarjeta gráfica NVIDIA GeForce RTX 3060 Ti');
+
+-- Inserta un artículo de computadora portátil
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(4, 'LAP-002', 'Laptop Ultraportátil', 750.00, 20, 'Laptop ultraportátil con procesador AMD Ryzen 5, 8 GB de RAM y SSD de 256 GB');
+
+-- Inserta un artículo de silla gamer
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(4, 'SILL-003', 'Silla Gamer Profesional', 300.00, 15, 'Silla gamer profesional con diseño ergonómico y soporte lumbar');
+
+-- Inserta un artículo de monitor gaming
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(4, 'MON-004', 'Monitor Gaming Curvo', 500.00, 8, 'Monitor gaming curvo de 27 pulgadas con resolución de 2560x1440 y tasa de refresco de 165 Hz');
+
+-- Inserta un artículo de teclado gaming
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(5, 'TEC-005', 'Teclado Gamer Mecánico', 100.00, 30, 'Teclado gamer mecánico con retroiluminación RGB y teclas programables');
+
+
+INSERT INTO Articulo (idCategoria, codigo, nombre, precioVenta, stock, descripcion) VALUES
+(5, 'RAT-006', 'Ratón Gamer Inalámbrico', 70.00, 12, 'Ratón gamer inalámbrico con sensor óptico de alta precisión y 16 botones programables');
+
+ALTER TABLE Usuario ADD clave VARCHAR(100) NOT NULL;
+
+
+
+INSERT INTO Rol (id, nombre, descripcion)
+VALUES
+(1, 'Administrador', 'Rol con acceso total al sistema'),
+(2, 'Usuario', 'Rol con acceso limitado al sistema');
+
+INSERT INTO Usuario (idRol, nombre, tipoDocumento, numDocumento, direccion, telefono, email, clave)
+VALUES
+(1, 'Juan Perez', 'Carnet de Identidad', '123456789', 'Calle 123 # 4-56', '3145678901', 'juanperez@correo.com', '123456'),
+(2, 'Maria Lopez', 'Pasaporte', '987654321', 'Calle 789 # 10-11', '3102938456', 'marialopez@correo.com', '654321'),
+(1, 'Pedro Gonzalez', 'Tarjeta de Residencia', '111222333', 'Carrera 123 # 45-67', '3057654321', 'pedrogonzalez@correo.com', '321654')
+(1, 'Edward97', 'Carnet de Identidad', '123456789', 'Calle 123 # 4-56', '3145678901', 'edward@correo.com', '123456');
+
+INSERT INTO Persona (tipoPersona, nombre, tipoDocumento, numDocumento, direccion, telefono, email)
+VALUES
+('Cliente', 'Juan Perez', 'DNI', '12345678', 'Av. Siempreviva 123', '555-1234', 'juanperez@email.com');
+
+INSERT INTO Persona (tipoPersona, nombre, tipoDocumento, numDocumento, direccion, telefono, email)
+VALUES
+('Cliente', 'Maria Gonzalez', 'DNI', '87654321', 'Calle Belgrano 456', '444-5678', 'mariagonzalez@email.com');
+
+INSERT INTO Persona (tipoPersona, nombre, tipoDocumento, numDocumento, direccion, telefono, email)
+VALUES
+('Empleado', 'Pedro Sanchez', 'DNI', '98765432', 'Calle San Martin 789', '333-9012', 'pedrosanchez@email.com');
+
+INSERT INTO Persona (tipoPersona, nombre, tipoDocumento, numDocumento, direccion, telefono, email)
+VALUES
+('Empleado', 'Ana Lopez', 'DNI', '01234567', 'Calle Rivadavia 1011', '222-3456', 'analopez@email.com');
+
+
+INSERT INTO Venta (idCliente, idUsuario, tipoComprobante, numComprobante, total)
+VALUES
+(1, 1, 'Factura A', '00001', 1200.00);
+
+INSERT INTO Venta (idCliente, idUsuario, tipoComprobante, numComprobante, total)
+VALUES
+(1, 2, 'Ticket', '00002', 500.00);
+
+INSERT INTO Venta (idCliente, idUsuario, tipoComprobante, numComprobante, total)
+VALUES
+(2, 1, 'Factura B', '00003', 750.00);
+
+INSERT INTO Venta (idCliente, idUsuario, tipoComprobante, numComprobante, total)
+VALUES
+(2, 2, 'Ticket', '00004', 250.00);
+
+
+
+INSERT INTO DetalleVenta (idVenta, idArticulo, cantidad, precio, descuento)
+VALUES
+(13, 1, 10, 50.00, 2.00),
+(14, 2, 5, 100.00, 10.00),
+(15, 3, 20, 25.00, 5.00),
+(16, 5, 15, 40.00, 2.00),
+(13, 4, 3, 150.00, 15.00);
+
+INSERT INTO Ingreso (idProveedor, idUsuario, tipoComprobante, numComprobante, total)
+VALUES
+(1, 4, 'Factura', '12345', 1000.00),
+(2, 5, 'Boleta', '54321', 500.00),
+(3, 6, 'Factura', '98765', 1500.00);
+
+INSERT INTO DetalleIngreso (idIngreso, idArticulo, cantidad, precio)
+VALUES
+(4, 1, 10, 50.00),
+(4, 2, 5, 100.00),
+(2, 3, 20, 25.00),
+(3, 1, 15, 40.00),
+(3, 4, 3, 150.00);
+
+
+
+
