@@ -37,18 +37,32 @@ namespace CpComputadorasG3
             if (ventas.Count > 0) dgvLista.Rows[0].Cells["numComprobante"].Selected = true;
         }
 
+        private void cargarCliente()
+        {
+            cbxPersona.DataSource = PersonaCln.listar();
+            cbxPersona.DisplayMember = "nombre";
+            cbxPersona.ValueMember = "id";
+        }
+        private void cargarUsuario()
+        {
+            cbxUsuario.DataSource = UsuarioCln.listar();
+            cbxUsuario.DisplayMember = "nombre";
+            cbxUsuario.ValueMember = "id";
+        }
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             pnlDatos.Visible = false;
             listar();
+            cargarCliente();
+            cargarUsuario();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             esNuevo = true;
             pnlDatos.Visible = true;
-            txtNumComprobante.Focus();
+            txtTipoComprobante.Focus();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -118,7 +132,10 @@ namespace CpComputadorasG3
                 {
                     venta.fechaRegistro = DateTime.Now;
                     venta.estado = 1;
+                    venta.idCliente = Convert.ToInt32(cbxPersona.SelectedValue);
+                    venta.idUsuario = Convert.ToInt32(cbxUsuario.SelectedValue);
                     VentaCln.insertar(venta);
+                    
                 }
                 else
                 {
@@ -144,8 +161,8 @@ namespace CpComputadorasG3
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
 
-            string numComprobante = dgvLista.Rows[index].Cells["numComprobante"].Value.ToString();
-            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la Venta {numComprobante}?",
+            string total = dgvLista.Rows[index].Cells["total"].Value.ToString();
+            DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar la venta de {total} Bs.?",
                 "::: IT Pro - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialog == DialogResult.OK)
             {

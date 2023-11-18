@@ -9,6 +9,15 @@ namespace ClnComputadorasG3
 {
     public class UsuarioCln
     {
+        public static Usuario validar(string usuario, string clave)
+        {
+            using (var context = new LabComputadorasG3Entities())
+            {
+                return context.Usuario
+                    .Where(x => x.nombre == usuario && x.clave == clave)
+                    .FirstOrDefault();
+            }
+        }
         public static int insertar(Usuario usuario)
         {
             using (var context = new LabComputadorasG3Entities())

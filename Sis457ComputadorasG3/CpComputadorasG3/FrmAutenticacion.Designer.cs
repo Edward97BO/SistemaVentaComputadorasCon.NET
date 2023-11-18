@@ -28,21 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAutenticacion));
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGuion = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.lblGuioness = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblInicioSesion = new System.Windows.Forms.Label();
+            this.erpUsuario = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpClave = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblClave = new System.Windows.Forms.Label();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClave)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLogo
@@ -71,7 +78,7 @@
             this.lblGuion.AutoSize = true;
             this.lblGuion.BackColor = System.Drawing.Color.Black;
             this.lblGuion.ForeColor = System.Drawing.Color.White;
-            this.lblGuion.Location = new System.Drawing.Point(222, 104);
+            this.lblGuion.Location = new System.Drawing.Point(222, 115);
             this.lblGuion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGuion.Name = "lblGuion";
             this.lblGuion.Size = new System.Drawing.Size(340, 13);
@@ -85,37 +92,32 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.Location = new System.Drawing.Point(224, 88);
+            this.txtUsuario.Location = new System.Drawing.Point(224, 99);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(336, 20);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "USUARIO:";
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // txtContraseña
+            // txtClave
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.Location = new System.Drawing.Point(224, 142);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(336, 20);
-            this.txtContraseña.TabIndex = 4;
-            this.txtContraseña.Text = "CONTRASEÑA:";
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
+            this.txtClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.ForeColor = System.Drawing.Color.White;
+            this.txtClave.Location = new System.Drawing.Point(224, 155);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(2);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(336, 20);
+            this.txtClave.TabIndex = 4;
+            this.txtClave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClave_KeyPress);
             // 
             // lblGuioness
             // 
             this.lblGuioness.AutoSize = true;
             this.lblGuioness.BackColor = System.Drawing.Color.Black;
             this.lblGuioness.ForeColor = System.Drawing.Color.White;
-            this.lblGuioness.Location = new System.Drawing.Point(222, 157);
+            this.lblGuioness.Location = new System.Drawing.Point(222, 170);
             this.lblGuioness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGuioness.Name = "lblGuioness";
             this.lblGuioness.Size = new System.Drawing.Size(340, 13);
@@ -177,17 +179,51 @@
             this.lblInicioSesion.TabIndex = 8;
             this.lblInicioSesion.Text = "BIENVENIDO";
             // 
+            // erpUsuario
+            // 
+            this.erpUsuario.ContainerControl = this;
+            // 
+            // erpClave
+            // 
+            this.erpClave.ContainerControl = this;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.LightGray;
+            this.lblUsuario.Location = new System.Drawing.Point(221, 77);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(58, 20);
+            this.lblUsuario.TabIndex = 9;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // lblClave
+            // 
+            this.lblClave.AutoSize = true;
+            this.lblClave.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.ForeColor = System.Drawing.Color.LightGray;
+            this.lblClave.Location = new System.Drawing.Point(220, 133);
+            this.lblClave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(80, 20);
+            this.lblClave.TabIndex = 10;
+            this.lblClave.Text = "Contraseña:";
+            // 
             // FrmAutenticacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(585, 268);
+            this.Controls.Add(this.lblClave);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblInicioSesion);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.lblGuioness);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblGuion);
@@ -203,6 +239,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpClave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,12 +251,16 @@
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label lblGuion;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblGuioness;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Label lblInicioSesion;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider erpUsuario;
+        private System.Windows.Forms.ErrorProvider erpClave;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

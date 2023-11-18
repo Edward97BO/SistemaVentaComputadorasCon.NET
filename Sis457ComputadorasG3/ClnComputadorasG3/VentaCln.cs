@@ -24,8 +24,6 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.Venta.Find(venta.id);
-                existente.idCliente= venta.idCliente;
-                existente.idUsuario = venta.idUsuario;
                 existente.tipoComprobante = venta.tipoComprobante;
                 existente.numComprobante = venta.numComprobante;
                 existente.total = venta.total;

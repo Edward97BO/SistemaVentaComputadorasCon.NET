@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClnComputadorasG3;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,50 +28,49 @@ namespace CpComputadorasG3
             this.WindowState = FormWindowState.Minimized;
         }
 
-
-        private void txtUsuario_Enter(object sender, EventArgs e)
+        private bool validar()
         {
-            if(txtUsuario.Text == "USUARIO"){            
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {      
-            if (txtUsuario.Text == "")
+            bool esValido = true;
+            erpUsuario.SetError(txtUsuario, "");
+            erpClave.SetError(txtClave, "");
+            if (string.IsNullOrEmpty(txtUsuario.Text)) 
             {
-                txtUsuario.Text = "USUARIO";
-                txtUsuario.ForeColor = Color.DimGray;
+                erpUsuario.SetError(txtUsuario, "El campo Usuario es obligatorio");
+                esValido = false;
             }
-        }
-
-        private void txtContraseña_Enter(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == "CONTRASEÑA"){
-                txtContraseña.Text = "";
-                txtContraseña.ForeColor = Color.LightGray;
-                txtContraseña.UseSystemPasswordChar = true;
+            if (string.IsNullOrEmpty(txtClave.Text))
+            {
+                erpClave.SetError(txtClave, "El campo Contraseña es obligatorio");
+                esValido = false;
             }
+            return esValido;
         }
-
-        private void txtContraseña_Leave(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == ""){
-                txtContraseña.Text = "CONTRASEÑA";
-                txtContraseña.ForeColor = Color.DimGray;
-                txtContraseña.UseSystemPasswordChar = false;
-            }
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            new FrmPrincipal().ShowDialog();
+            if (validar())
+            {
+                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
+                if (usuario == null)
+                {
+                    Util.usuario = usuario;
+                    txtClave.Text = string.Empty;
+                    txtUsuario.Focus();
+                    txtUsuario.SelectAll();
+                    Visible = false;
+                    new FrmPrincipal().ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos",
+                        "::: IT Pro - Mensaje :::", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
-        private void lblInicioSesion_Click(object sender, EventArgs e)
+        private void txtClave_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if(e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
         }
     }
 }
