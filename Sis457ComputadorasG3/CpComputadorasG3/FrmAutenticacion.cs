@@ -49,8 +49,8 @@ namespace CpComputadorasG3
         {
             if (validar())
             {
-                var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
-                if (usuario == null)
+                var usuario = UsuarioCln.validar(txtUsuario.Text,Util.Encrypt( txtClave.Text));
+                if (usuario != null)
                 {
                     Util.usuario = usuario;
                     txtClave.Text = string.Empty;
