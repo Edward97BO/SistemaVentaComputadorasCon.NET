@@ -26,5 +26,6 @@ namespace CadComputadorasG3
     
         public virtual Articulo Articulo { get; set; }
         public virtual Venta Venta { get; set; }
+        public virtual Persona Persona { get; set; }
     }
 }

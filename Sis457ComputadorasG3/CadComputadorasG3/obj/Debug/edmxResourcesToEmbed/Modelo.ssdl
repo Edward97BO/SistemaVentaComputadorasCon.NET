@@ -261,6 +261,114 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_DetalleIngreso_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+    <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleIngreso">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DetalleIngreso_Ingreso">
+    <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="1" />
+    <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingreso">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleIngreso">
+        <PropertyRef Name="idIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DetalleVenta_Articulo">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DetalleVenta_Venta">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="idVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Ingreso_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Ingreso">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Inreso_Persona">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Ingreso">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Usuario_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Venta_Persona">
+    <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Venta_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="paArticuloListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
@@ -341,6 +449,42 @@
     <AssociationSet Name="fk_Articulo_Categoria" Association="Self.fk_Articulo_Categoria">
       <End Role="Categoria" EntitySet="Categoria" />
       <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetalleIngreso_Articulo" Association="Self.fk_DetalleIngreso_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetalleIngreso_Ingreso" Association="Self.fk_DetalleIngreso_Ingreso">
+      <End Role="Ingreso" EntitySet="Ingreso" />
+      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetalleVenta_Articulo" Association="Self.fk_DetalleVenta_Articulo">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetalleVenta_Venta" Association="Self.fk_DetalleVenta_Venta">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Ingreso_Usuario" Association="Self.fk_Ingreso_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Ingreso" EntitySet="Ingreso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Inreso_Persona" Association="Self.fk_Inreso_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Ingreso" EntitySet="Ingreso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Usuario_Rol" Association="Self.fk_Usuario_Rol">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Venta_Persona" Association="Self.fk_Venta_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Venta_Usuario" Association="Self.fk_Venta_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Venta" EntitySet="Venta" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

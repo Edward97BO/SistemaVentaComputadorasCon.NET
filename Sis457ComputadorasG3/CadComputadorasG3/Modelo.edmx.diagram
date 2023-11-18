@@ -25,6 +25,7 @@
         <AssociationConnector Association="LabComputadorasG3Model.FK__Venta__idCliente__49C3F6B7" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Usuario__email__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="LabComputadorasG3Model.FK__Venta__idUsuario__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="LabComputadorasG3Model.fk_DetalleVenta_Venta" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

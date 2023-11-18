@@ -62,6 +62,7 @@
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Articulo" Relationship="Self.FK__DetalleVe__idArt__540C7B00" FromRole="DetalleVenta" ToRole="Articulo" />
     <NavigationProperty Name="Venta" Relationship="Self.FK__DetalleVe__idVen__531856C7" FromRole="DetalleVenta" ToRole="Venta" />
+    <NavigationProperty Name="Persona" Relationship="LabComputadorasG3Model.fk_DetalleVenta_Venta" FromRole="DetalleVenta" ToRole="Persona" />
   </EntityType>
   <EntityType Name="Ingreso">
     <Key>
@@ -97,6 +98,7 @@
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Ingreso" Relationship="Self.FK__Ingreso__idProve__4222D4EF" FromRole="Persona" ToRole="Ingreso" />
     <NavigationProperty Name="Venta" Relationship="Self.FK__Venta__idCliente__49C3F6B7" FromRole="Persona" ToRole="Venta" />
+    <NavigationProperty Name="DetalleVenta" Relationship="LabComputadorasG3Model.fk_DetalleVenta_Venta" FromRole="Persona" ToRole="DetalleVenta" />
   </EntityType>
   <EntityType Name="Rol">
     <Key>
@@ -364,6 +366,10 @@
     <FunctionImport Name="paVentaListar" ReturnType="Collection(LabComputadorasG3Model.paVentaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <AssociationSet Name="fk_DetalleVenta_Venta" Association="LabComputadorasG3Model.fk_DetalleVenta_Venta">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="paArticuloListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -463,4 +469,16 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
+  <Association Name="fk_DetalleVenta_Venta">
+    <End Type="LabComputadorasG3Model.Persona" Role="Persona" Multiplicity="1" />
+    <End Type="LabComputadorasG3Model.DetalleVenta" Role="DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="idVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

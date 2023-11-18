@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LabComputadorasG3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LabComputadorasG3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Articulo">
           <Key>
             <PropertyRef Name="id" />
@@ -266,6 +266,114 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_DetalleIngreso_Articulo">
+          <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+          <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articulo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetalleIngreso">
+              <PropertyRef Name="idArticulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DetalleIngreso_Ingreso">
+          <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="1" />
+          <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ingreso">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetalleIngreso">
+              <PropertyRef Name="idIngreso" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DetalleVenta_Articulo">
+          <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+          <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articulo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetalleVenta">
+              <PropertyRef Name="idArticulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DetalleVenta_Venta">
+          <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+          <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetalleVenta">
+              <PropertyRef Name="idVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Ingreso_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Ingreso">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Inreso_Persona">
+          <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+          <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Ingreso">
+              <PropertyRef Name="idProveedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Usuario_Rol">
+          <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="idRol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Venta_Persona">
+          <End Role="Persona" Type="Self.Persona" Multiplicity="1" />
+          <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Venta_Usuario">
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Venta">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="paArticuloListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="parametro" Type="varchar" Mode="In" />
         </Function>
@@ -347,9 +455,44 @@
             <End Role="Categoria" EntitySet="Categoria" />
             <End Role="Articulo" EntitySet="Articulo" />
           </AssociationSet>
+          <AssociationSet Name="fk_DetalleIngreso_Articulo" Association="Self.fk_DetalleIngreso_Articulo">
+            <End Role="Articulo" EntitySet="Articulo" />
+            <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DetalleIngreso_Ingreso" Association="Self.fk_DetalleIngreso_Ingreso">
+            <End Role="Ingreso" EntitySet="Ingreso" />
+            <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DetalleVenta_Articulo" Association="Self.fk_DetalleVenta_Articulo">
+            <End Role="Articulo" EntitySet="Articulo" />
+            <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DetalleVenta_Venta" Association="Self.fk_DetalleVenta_Venta">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Ingreso_Usuario" Association="Self.fk_Ingreso_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Ingreso" EntitySet="Ingreso" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Inreso_Persona" Association="Self.fk_Inreso_Persona">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Ingreso" EntitySet="Ingreso" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Usuario_Rol" Association="Self.fk_Usuario_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Venta_Persona" Association="Self.fk_Venta_Persona">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Venta_Usuario" Association="Self.fk_Venta_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Venta" EntitySet="Venta" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LabComputadorasG3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -415,6 +558,7 @@
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Articulo" Relationship="Self.FK__DetalleVe__idArt__540C7B00" FromRole="DetalleVenta" ToRole="Articulo" />
           <NavigationProperty Name="Venta" Relationship="Self.FK__DetalleVe__idVen__531856C7" FromRole="DetalleVenta" ToRole="Venta" />
+          <NavigationProperty Name="Persona" Relationship="LabComputadorasG3Model.fk_DetalleVenta_Venta" FromRole="DetalleVenta" ToRole="Persona" />
         </EntityType>
         <EntityType Name="Ingreso">
           <Key>
@@ -450,6 +594,7 @@
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Ingreso" Relationship="Self.FK__Ingreso__idProve__4222D4EF" FromRole="Persona" ToRole="Ingreso" />
           <NavigationProperty Name="Venta" Relationship="Self.FK__Venta__idCliente__49C3F6B7" FromRole="Persona" ToRole="Venta" />
+          <NavigationProperty Name="DetalleVenta" Relationship="LabComputadorasG3Model.fk_DetalleVenta_Venta" FromRole="Persona" ToRole="DetalleVenta" />
         </EntityType>
         <EntityType Name="Rol">
           <Key>
@@ -691,32 +836,36 @@
             <End Role="Venta" EntitySet="Venta" />
           </AssociationSet>
           <FunctionImport Name="paArticuloListar" ReturnType="Collection(LabComputadorasG3Model.paArticuloListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paCategoriaListar" ReturnType="Collection(LabComputadorasG3Model.paCategoriaListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paDetalleIngresoListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleIngresoListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paDetalleVentaListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleVentaListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paIngresoListar" ReturnType="Collection(LabComputadorasG3Model.paIngresoListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paPersonaListar" ReturnType="Collection(LabComputadorasG3Model.paPersonaListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paRolListar" ReturnType="Collection(LabComputadorasG3Model.paRolListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabComputadorasG3Model.paUsuarioListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="paVentaListar" ReturnType="Collection(LabComputadorasG3Model.paVentaListar_Result)">
-            <Parameter Name="parametro" Mode="In" Type="String" />
+          <Parameter Name="parametro" Mode="In" Type="String" />
           </FunctionImport>
+          <AssociationSet Name="fk_DetalleVenta_Venta" Association="LabComputadorasG3Model.fk_DetalleVenta_Venta">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+          </AssociationSet>
         </EntityContainer>
         <ComplexType Name="paArticuloListar_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -816,6 +965,18 @@
           <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
           <Property Type="Int16" Name="estado" Nullable="false" />
         </ComplexType>
+        <Association Name="fk_DetalleVenta_Venta">
+          <End Type="LabComputadorasG3Model.Persona" Role="Persona" Multiplicity="1" />
+          <End Type="LabComputadorasG3Model.DetalleVenta" Role="DetalleVenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DetalleVenta">
+              <PropertyRef Name="idVenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

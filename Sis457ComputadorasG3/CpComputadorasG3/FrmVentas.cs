@@ -30,15 +30,13 @@ namespace CpComputadorasG3
             dgvLista.Columns["tipoComprobante"].HeaderText = "Tipo de Comprobante";
             dgvLista.Columns["numComprobante"].HeaderText = "Número de Comprobante";
             dgvLista.Columns["total"].HeaderText = "Total";
-
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
             btnEditar.Enabled = ventas.Count > 0;
             btnEliminar.Enabled = ventas.Count > 0;
-            if (ventas.Count > 0) dgvLista.Rows[0].Cells["nombre"].Selected = true;
+            if (ventas.Count > 0) dgvLista.Rows[0].Cells["numComprobante"].Selected = true;
         }
 
-        
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
