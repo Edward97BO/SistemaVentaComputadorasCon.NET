@@ -15,8 +15,9 @@
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Categoria" Relationship="Self.FK__Articulo__idCate__38996AB5" FromRole="Articulo" ToRole="Categoria" />
-    <NavigationProperty Name="DetalleIngreso" Relationship="LabComputadorasG3Model.FK__DetalleIn__idArt__503BEA1C" FromRole="Articulo" ToRole="DetalleIngreso" />
-    <NavigationProperty Name="DetalleVenta" Relationship="LabComputadorasG3Model.FK__DetalleVe__idArt__540C7B00" FromRole="Articulo" ToRole="DetalleVenta" />
+    <NavigationProperty Name="DetalleIngreso" Relationship="Self.FK__DetalleIn__idArt__503BEA1C" FromRole="Articulo" ToRole="DetalleIngreso" />
+    <NavigationProperty Name="DetalleVenta" Relationship="Self.FK__DetalleVe__idArt__540C7B00" FromRole="Articulo" ToRole="DetalleVenta" />
+    <NavigationProperty Name="Categoria1" Relationship="Self.fk_Articulo_Categoria" FromRole="Articulo" ToRole="Categoria" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -29,6 +30,38 @@
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="Articulo" Relationship="Self.FK__Articulo__idCate__38996AB5" FromRole="Categoria" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo1" Relationship="Self.fk_Articulo_Categoria" FromRole="Categoria" ToRole="Articulo" />
+  </EntityType>
+  <EntityType Name="DetalleIngreso">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idIngreso" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Articulo" Relationship="Self.FK__DetalleIn__idArt__503BEA1C" FromRole="DetalleIngreso" ToRole="Articulo" />
+    <NavigationProperty Name="Ingreso" Relationship="Self.FK__DetalleIn__idIng__4F47C5E3" FromRole="DetalleIngreso" ToRole="Ingreso" />
+  </EntityType>
+  <EntityType Name="DetalleVenta">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idVenta" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="descuento" Type="Decimal" Precision="11" Scale="2" Nullable="false" />
+    <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Articulo" Relationship="Self.FK__DetalleVe__idArt__540C7B00" FromRole="DetalleVenta" ToRole="Articulo" />
+    <NavigationProperty Name="Venta" Relationship="Self.FK__DetalleVe__idVen__531856C7" FromRole="DetalleVenta" ToRole="Venta" />
   </EntityType>
   <EntityType Name="Ingreso">
     <Key>
@@ -43,9 +76,9 @@
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DetalleIngreso" Relationship="Self.FK__DetalleIn__idIng__4F47C5E3" FromRole="Ingreso" ToRole="DetalleIngreso" />
     <NavigationProperty Name="Persona" Relationship="Self.FK__Ingreso__idProve__4222D4EF" FromRole="Ingreso" ToRole="Persona" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK__Ingreso__idUsuar__4316F928" FromRole="Ingreso" ToRole="Usuario" />
-    <NavigationProperty Name="DetalleIngreso" Relationship="LabComputadorasG3Model.FK__DetalleIn__idIng__4F47C5E3" FromRole="Ingreso" ToRole="DetalleIngreso" />
   </EntityType>
   <EntityType Name="Persona">
     <Key>
@@ -92,10 +125,10 @@
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
+    <Property Name="clave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Ingreso" Relationship="Self.FK__Ingreso__idUsuar__4316F928" FromRole="Usuario" ToRole="Ingreso" />
     <NavigationProperty Name="Rol" Relationship="Self.FK__Usuario__email__3F466844" FromRole="Usuario" ToRole="Rol" />
     <NavigationProperty Name="Venta" Relationship="Self.FK__Venta__idUsuario__4AB81AF0" FromRole="Usuario" ToRole="Venta" />
-    <Property Name="clave" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Venta">
     <Key>
@@ -110,9 +143,9 @@
     <Property Name="usuarioRegistro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="estado" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="DetalleVenta" Relationship="Self.FK__DetalleVe__idVen__531856C7" FromRole="Venta" ToRole="DetalleVenta" />
     <NavigationProperty Name="Persona" Relationship="Self.FK__Venta__idCliente__49C3F6B7" FromRole="Venta" ToRole="Persona" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK__Venta__idUsuario__4AB81AF0" FromRole="Venta" ToRole="Usuario" />
-    <NavigationProperty Name="DetalleVenta" Relationship="LabComputadorasG3Model.FK__DetalleVe__idVen__531856C7" FromRole="Venta" ToRole="DetalleVenta" />
   </EntityType>
   <Association Name="FK__Articulo__idCate__38996AB5">
     <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
@@ -123,6 +156,70 @@
       </Principal>
       <Dependent Role="Articulo">
         <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleIn__idArt__503BEA1C">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+    <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleIngreso">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleVe__idArt__540C7B00">
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Articulo_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleIn__idIng__4F47C5E3">
+    <End Role="Ingreso" Type="Self.Ingreso" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetalleIngreso" Type="Self.DetalleIngreso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingreso">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleIngreso">
+        <PropertyRef Name="idIngreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleVe__idVen__531856C7">
+    <End Role="Venta" Type="Self.Venta" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DetalleVenta" Type="Self.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="idVenta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -189,6 +286,8 @@
   <EntityContainer Name="LabComputadorasG3Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Articulo" EntityType="Self.Articulo" />
     <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="DetalleIngreso" EntityType="Self.DetalleIngreso" />
+    <EntitySet Name="DetalleVenta" EntityType="Self.DetalleVenta" />
     <EntitySet Name="Ingreso" EntityType="Self.Ingreso" />
     <EntitySet Name="Persona" EntityType="Self.Persona" />
     <EntitySet Name="Rol" EntityType="Self.Rol" />
@@ -197,6 +296,26 @@
     <AssociationSet Name="FK__Articulo__idCate__38996AB5" Association="Self.FK__Articulo__idCate__38996AB5">
       <End Role="Categoria" EntitySet="Categoria" />
       <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleIn__idArt__503BEA1C" Association="Self.FK__DetalleIn__idArt__503BEA1C">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleVe__idArt__540C7B00" Association="Self.FK__DetalleVe__idArt__540C7B00">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Articulo_Categoria" Association="Self.fk_Articulo_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleIn__idIng__4F47C5E3" Association="Self.FK__DetalleIn__idIng__4F47C5E3">
+      <End Role="Ingreso" EntitySet="Ingreso" />
+      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleVe__idVen__531856C7" Association="Self.FK__DetalleVe__idVen__531856C7">
+      <End Role="Venta" EntitySet="Venta" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
     </AssociationSet>
     <AssociationSet Name="FK__Ingreso__idProve__4222D4EF" Association="Self.FK__Ingreso__idProve__4222D4EF">
       <End Role="Persona" EntitySet="Persona" />
@@ -224,10 +343,19 @@
     <FunctionImport Name="paCategoriaListar" ReturnType="Collection(LabComputadorasG3Model.paCategoriaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="paDetalleIngresoListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleIngresoListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paDetalleVentaListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleVentaListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="paIngresoListar" ReturnType="Collection(LabComputadorasG3Model.paIngresoListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="paPersonaListar" ReturnType="Collection(LabComputadorasG3Model.paPersonaListar_Result)">
+      <Parameter Name="parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paRolListar" ReturnType="Collection(LabComputadorasG3Model.paRolListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="paUsuarioListar" ReturnType="Collection(LabComputadorasG3Model.paUsuarioListar_Result)">
@@ -236,33 +364,6 @@
     <FunctionImport Name="paVentaListar" ReturnType="Collection(LabComputadorasG3Model.paVentaListar_Result)">
       <Parameter Name="parametro" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="paDetalleIngresoListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleIngresoListar_Result)">
-      <Parameter Name="parametro" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="paDetalleVentaListar" ReturnType="Collection(LabComputadorasG3Model.paDetalleVentaListar_Result)">
-      <Parameter Name="parametro" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="paRolListar" ReturnType="Collection(LabComputadorasG3Model.paRolListar_Result)">
-      <Parameter Name="parametro" Mode="In" Type="String" />
-    </FunctionImport>
-    <EntitySet Name="DetalleIngreso" EntityType="LabComputadorasG3Model.DetalleIngreso" />
-    <EntitySet Name="DetalleVenta" EntityType="LabComputadorasG3Model.DetalleVenta" />
-    <AssociationSet Name="FK__DetalleIn__idArt__503BEA1C" Association="LabComputadorasG3Model.FK__DetalleIn__idArt__503BEA1C">
-      <End Role="Articulo" EntitySet="Articulo" />
-      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DetalleVe__idArt__540C7B00" Association="LabComputadorasG3Model.FK__DetalleVe__idArt__540C7B00">
-      <End Role="Articulo" EntitySet="Articulo" />
-      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DetalleIn__idIng__4F47C5E3" Association="LabComputadorasG3Model.FK__DetalleIn__idIng__4F47C5E3">
-      <End Role="Ingreso" EntitySet="Ingreso" />
-      <End Role="DetalleIngreso" EntitySet="DetalleIngreso" />
-    </AssociationSet>
-    <AssociationSet Name="FK__DetalleVe__idVen__531856C7" Association="LabComputadorasG3Model.FK__DetalleVe__idVen__531856C7">
-      <End Role="Venta" EntitySet="Venta" />
-      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
-    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="paArticuloListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -270,7 +371,7 @@
     <Property Type="String" Name="codigo" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="nombre" Nullable="false" MaxLength="100" />
     <Property Type="Decimal" Name="precioVenta" Nullable="false" Precision="11" Scale="2" />
-    <Property Type="Int32" Name="stock" Nullable="false" />
+    <Property Type="Int32" Name="stock" Nullable="true" />
     <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
@@ -280,6 +381,27 @@
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paDetalleIngresoListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="idIngreso" Nullable="false" />
+    <Property Type="Int32" Name="idArticulo" Nullable="false" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="precio" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paDetalleVentaListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="idVenta" Nullable="false" />
+    <Property Type="Int32" Name="idArticulo" Nullable="false" />
+    <Property Type="Int32" Name="cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="precio" Nullable="false" Precision="11" Scale="2" />
+    <Property Type="Decimal" Name="descuento" Nullable="false" Precision="11" Scale="2" />
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
@@ -308,6 +430,14 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
+  <ComplexType Name="paRolListar_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="estado" Nullable="false" />
+  </ComplexType>
   <ComplexType Name="paUsuarioListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
     <Property Type="Int32" Name="idRol" Nullable="false" />
@@ -320,6 +450,7 @@
     <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
+    <Property Type="String" Name="clave" Nullable="false" MaxLength="100" />
   </ComplexType>
   <ComplexType Name="paVentaListar_Result">
     <Property Type="Int32" Name="id" Nullable="false" />
@@ -332,116 +463,4 @@
     <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
     <Property Type="Int16" Name="estado" Nullable="false" />
   </ComplexType>
-  <ComplexType Name="paDetalleIngresoListar_Result">
-    <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="Int32" Name="idIngreso" Nullable="false" />
-    <Property Type="Int32" Name="idArticulo" Nullable="false" />
-    <Property Type="Int32" Name="cantidad" Nullable="false" />
-    <Property Type="Decimal" Name="precio" Nullable="false" Precision="11" Scale="2" />
-    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
-    <Property Type="Int16" Name="estado" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="paDetalleVentaListar_Result">
-    <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="Int32" Name="idVenta" Nullable="false" />
-    <Property Type="Int32" Name="idArticulo" Nullable="false" />
-    <Property Type="Int32" Name="cantidad" Nullable="false" />
-    <Property Type="Decimal" Name="precio" Nullable="false" Precision="11" Scale="2" />
-    <Property Type="Decimal" Name="descuento" Nullable="false" Precision="11" Scale="2" />
-    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
-    <Property Type="Int16" Name="estado" Nullable="false" />
-  </ComplexType>
-  <ComplexType Name="paRolListar_Result">
-    <Property Type="Int32" Name="id" Nullable="false" />
-    <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
-    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="500" />
-    <Property Type="String" Name="usuarioRegistro" Nullable="false" MaxLength="50" />
-    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" Precision="23" />
-    <Property Type="Int16" Name="estado" Nullable="false" />
-  </ComplexType>
-  <EntityType Name="DetalleIngreso">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idIngreso" Type="Int32" Nullable="false" />
-    <Property Name="idArticulo" Type="Int32" Nullable="false" />
-    <Property Name="cantidad" Type="Int32" Nullable="false" />
-    <Property Name="precio" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-    <Property Name="usuarioRegistro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Articulo" Relationship="LabComputadorasG3Model.FK__DetalleIn__idArt__503BEA1C" FromRole="DetalleIngreso" ToRole="Articulo" />
-    <NavigationProperty Name="Ingreso" Relationship="LabComputadorasG3Model.FK__DetalleIn__idIng__4F47C5E3" FromRole="DetalleIngreso" ToRole="Ingreso" />
-  </EntityType>
-  <EntityType Name="DetalleVenta">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="idVenta" Type="Int32" Nullable="false" />
-    <Property Name="idArticulo" Type="Int32" Nullable="false" />
-    <Property Name="cantidad" Type="Int32" Nullable="false" />
-    <Property Name="precio" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-    <Property Name="descuento" Type="Decimal" Nullable="false" Precision="11" Scale="2" />
-    <Property Name="usuarioRegistro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="fechaRegistro" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="estado" Type="Int16" Nullable="false" />
-    <NavigationProperty Name="Articulo" Relationship="LabComputadorasG3Model.FK__DetalleVe__idArt__540C7B00" FromRole="DetalleVenta" ToRole="Articulo" />
-    <NavigationProperty Name="Venta" Relationship="LabComputadorasG3Model.FK__DetalleVe__idVen__531856C7" FromRole="DetalleVenta" ToRole="Venta" />
-  </EntityType>
-  <Association Name="FK__DetalleIn__idArt__503BEA1C">
-    <End Type="LabComputadorasG3Model.Articulo" Role="Articulo" Multiplicity="1" />
-    <End Type="LabComputadorasG3Model.DetalleIngreso" Role="DetalleIngreso" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Articulo">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="DetalleIngreso">
-        <PropertyRef Name="idArticulo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__DetalleVe__idArt__540C7B00">
-    <End Type="LabComputadorasG3Model.Articulo" Role="Articulo" Multiplicity="1" />
-    <End Type="LabComputadorasG3Model.DetalleVenta" Role="DetalleVenta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Articulo">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="DetalleVenta">
-        <PropertyRef Name="idArticulo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__DetalleIn__idIng__4F47C5E3">
-    <End Type="LabComputadorasG3Model.Ingreso" Role="Ingreso" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Type="LabComputadorasG3Model.DetalleIngreso" Role="DetalleIngreso" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Ingreso">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="DetalleIngreso">
-        <PropertyRef Name="idIngreso" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__DetalleVe__idVen__531856C7">
-    <End Type="LabComputadorasG3Model.Venta" Role="Venta" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Type="LabComputadorasG3Model.DetalleVenta" Role="DetalleVenta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Venta">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="DetalleVenta">
-        <PropertyRef Name="idVenta" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

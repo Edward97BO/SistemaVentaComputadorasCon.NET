@@ -28,13 +28,13 @@ namespace CpComputadorasG3
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["idRol"].Visible = false;
-            dgvLista.Columns["nombre"].HeaderText = "Nombres";
+            dgvLista.Columns["nombre"].HeaderText = "Usuario";
             dgvLista.Columns["tipoDocumento"].HeaderText = "Tipo de Documento";
             dgvLista.Columns["numDocumento"].HeaderText = "Número de Documento";
             dgvLista.Columns["direccion"].HeaderText = "Dirección";
             dgvLista.Columns["telefono"].HeaderText = "Teléfono";
             dgvLista.Columns["email"].HeaderText = "Email";
-            //dgvLista.Columns["clave"].HeaderText = "Contraseña";
+            dgvLista.Columns["clave"].HeaderText = "Contraseña";
             dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario";
             dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha de Registro";
             btnEditar.Enabled = usuarios.Count > 0;

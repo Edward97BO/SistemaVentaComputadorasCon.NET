@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'D:\Universidad\Clone\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\Modelo.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'D:\Universidad\Clone\Clone 2\sis457_computadoras_g3\Sis457ComputadorasG3\CadComputadorasG3\Modelo.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.
