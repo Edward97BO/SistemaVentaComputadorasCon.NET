@@ -9,15 +9,7 @@ namespace ClnComputadorasG3
 {
     public class UsuarioCln
     {
-        public static Usuario validar(string usuario, string clave)
-        {
-            using (var context = new LabComputadorasG3Entities())
-            {
-                return context.Usuario
-                    .Where(x => x.nombre == usuario && x.clave == clave)
-                    .FirstOrDefault();
-            }
-        }
+        
         public static int insertar(Usuario usuario)
         {
             using (var context = new LabComputadorasG3Entities())
@@ -33,7 +25,6 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 var existente = context.Usuario.Find(usuario.id);
-                //existente.idRol = usuario.idRol;
                 existente.nombre = usuario.nombre;
                 existente.tipoDocumento = usuario.tipoDocumento;
                 existente.numDocumento = usuario.numDocumento;
@@ -77,6 +68,15 @@ namespace ClnComputadorasG3
             using (var context = new LabComputadorasG3Entities())
             {
                 return context.paUsuarioListar(parametro).ToList();
+            }
+        }
+        public static Usuario validar(string usuario, string clave)
+        {
+            using (var context = new LabComputadorasG3Entities())
+            {
+                return context.Usuario
+                    .Where(x => x.nombre == usuario && x.clave == clave)
+                    .FirstOrDefault();
             }
         }
     }

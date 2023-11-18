@@ -159,8 +159,8 @@ namespace CpComputadorasG3
                 usuario.direccion = txtDireccion.Text.Trim();
                 usuario.telefono = txtTelefono.Text.Trim();
                 usuario.email = txtEmail.Text.Trim();
-                usuario.clave = txtClave.Text.Trim();
-                usuario.usuarioRegistro = "Admin IT Pro";
+                usuario.clave = Util.Encrypt(txtClave.Text.Trim());
+                usuario.usuarioRegistro = "Admin It Pro";
                 if (esNuevo)
                 {
                     usuario.fechaRegistro = DateTime.Now;
@@ -195,7 +195,6 @@ namespace CpComputadorasG3
         {
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-
             string nombre = dgvLista.Rows[index].Cells["nombre"].Value.ToString();
             DialogResult dialog = MessageBox.Show($"¿Está seguro que desea eliminar el Usuario {nombre}?",
                 "::: IT Pro - Mensaje :::", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
