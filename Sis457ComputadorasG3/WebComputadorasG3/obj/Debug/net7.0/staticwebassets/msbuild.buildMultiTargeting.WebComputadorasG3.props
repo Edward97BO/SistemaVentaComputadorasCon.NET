@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebComputadorasG3.props" />
+</Project>

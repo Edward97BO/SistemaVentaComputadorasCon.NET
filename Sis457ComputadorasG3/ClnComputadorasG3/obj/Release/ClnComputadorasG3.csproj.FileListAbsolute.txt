@@ -13,3 +13,18 @@ D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComp
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.csproj.CopyComplete
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.dll
 D:\Universidad\Trabajo Final\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\ClnComputadorasG3.dll.config
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\ClnComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\ClnComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\CadComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\EntityFramework.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\EntityFramework.SqlServer.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\CadComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\CadComputadorasG3.dll.config
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\EntityFramework.xml
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Release\EntityFramework.SqlServer.xml
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.csproj.AssemblyReference.cache
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.csproj.CoreCompileInputs.cache
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.csproj.CopyComplete
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Release\ClnComputadorasG3.pdb

@@ -73,3 +73,18 @@ D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457Computador
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.csproj.CopyComplete
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.dll
 D:\copia lab seguridad\Nueva carpeta (3)\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\ClnComputadorasG3.dll.config
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\ClnComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\ClnComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\CadComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\EntityFramework.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\EntityFramework.SqlServer.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\CadComputadorasG3.pdb
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\CadComputadorasG3.dll.config
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\EntityFramework.xml
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\bin\Debug\EntityFramework.SqlServer.xml
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.csproj.AssemblyReference.cache
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.csproj.CoreCompileInputs.cache
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.csproj.CopyComplete
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.dll
+D:\Universidad\Trabajo\sis457_computadoras_g3\Sis457ComputadorasG3\ClnComputadorasG3\obj\Debug\ClnComputadorasG3.pdb
