@@ -58,7 +58,7 @@ namespace WebComputadorasG3.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,IdCategoria,Codigo,Nombre,PrecioVenta,Stock,Descripcion")] Articulo articulo)
         {
-            if (string.IsNullOrEmpty(articulo.Codigo) && articulo.PrecioVenta > 0)
+            if (!string.IsNullOrEmpty(articulo.Codigo) && articulo.PrecioVenta > 0)
             {
                 articulo.UsuarioRegistro = "Edward";
                 articulo.FechaRegistro = DateTime.Now;
