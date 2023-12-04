@@ -1,0 +1,51 @@
+﻿@model WebComputadorasG3.Models.Ventum
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color: #68B5B6;">
+
+    <div class="container">
+        <h2><br /><br />Detalles de Venta</h2>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">TipoComprobante</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.TipoComprobante)
+            </dd>
+            <dt class="col-sm-2">NumComprobante</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.NumComprobante)
+            </dd>
+            <dt class="col-sm-2">Total</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Total)
+            </dd>
+            <dt class="col-sm-2">UsuarioRegistro</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UsuarioRegistro)
+            </dd>
+            <dt class="col-sm-2">FechaRegistro</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FechaRegistro)
+            </dd>
+            <dt class="col-sm-2">Estado</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Estado)
+            </dd>
+            <dt class="col-sm-2">Cliente</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdClienteNavigation.Nombre)
+            </dd>
+            <dt class="col-sm-2">Empleado</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdUsuarioNavigation.Nombre)
+            </dd>
+        </dl>
+        <div>
+            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+            <a asp-action="Index">Volver a la Lista</a>
+        </div>
+    </div>

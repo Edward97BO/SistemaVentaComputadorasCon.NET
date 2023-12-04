@@ -1,0 +1,73 @@
+﻿@model WebComputadorasG3.Models.DetalleVentum
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DetalleVentum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descuento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descuento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioRegistro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioRegistro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdArticuloNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdArticuloNavigation.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdVenta1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdVenta1.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdVentaNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdVentaNavigation.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,59 @@
+﻿@model WebComputadorasG3.Models.Ventum
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color: #68B5B6;">
+
+    <div class="container">
+        <h2><br /><br />Crear Venta</h2>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="IdCliente" class="control-label">Cliente</label>
+                        <select asp-for="IdCliente" class="form-control" asp-items="ViewBag.IdCliente"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdUsuario" class="control-label">Empleado</label>
+                        <select asp-for="IdUsuario" class="form-control" asp-items="ViewBag.IdUsuario"></select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TipoComprobante" class="control-label">Tipo de Comprobante</label>
+                        <select asp-for="TipoComprobante" class="form-control">
+                            <option>Factura</option>
+                            <option>Ticket</option>
+                            <option>Recibo</option>
+                        </select>
+                        <span asp-validation-for="TipoComprobante" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NumComprobante" class="control-label">Número de Comprobante</label>
+                        <input asp-for="NumComprobante" class="form-control" />
+                        <span asp-validation-for="NumComprobante" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Total" class="control-label">Total</label>
+                        <input type="number " step="0.2" asp-for="Total" class="form-control" />
+                        <span asp-validation-for="Total" class="text-danger"></span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" value="Crear" class="btn btn-primary" />|
+                        <a asp-action="Index">Volver a la Lista</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

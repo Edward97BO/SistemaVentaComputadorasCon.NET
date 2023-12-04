@@ -1,0 +1,72 @@
+﻿@model IEnumerable<WebComputadorasG3.Models.DetalleVentum>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="background-color: #68B5B6;">
+    <div class="container">
+        <h1><br /><br />Venta Detalles</h1>
+        <p>
+            <a asp-action="Create">
+                <i class="fa fa-plus"></i> Crear Nuevo
+            </a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Descuento</th>
+                    <th>Usuario Registro</th>
+                    <th>Fecha de Registro</th>
+                    <th>Estado</th>
+                    <th>Artículo</th>
+                    <th>IdVenta1</th>
+                    <th>IdVentaNavigation</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cantidad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Precio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descuento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaRegistro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Estado)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdArticuloNavigation.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdVenta1.NumComprobante)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdVentaNavigation)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                            <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
