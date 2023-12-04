@@ -47,7 +47,7 @@ namespace WebComputadorasG3.Controllers
         // GET: Usuarios/Create
         public IActionResult Create()
         {
-            ViewData["IdRol"] = new SelectList(_context.Rols, "Id", "Id");
+            ViewData["IdRol"] = new SelectList(_context.Rols, "Id", "Nombre");
             return View();
         }
 
@@ -56,10 +56,14 @@ namespace WebComputadorasG3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdRol,Nombre,TipoDocumento,NumDocumento,Direccion,Telefono,Email,UsuarioRegistro,FechaRegistro,Estado,Clave")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,IdRol,Nombre,TipoDocumento,NumDocumento,Direccion,Telefono,Email")] Usuario usuario)
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(usuario.Nombre))
             {
+                usuario.Clave = Util.Encrypt("sis457");
+                usuario.UsuarioRegistro = "Edward";
+                usuario.FechaRegistro = DateTime.Now;
+                usuario.Estado = 1;
                 _context.Add(usuario);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -81,7 +85,7 @@ namespace WebComputadorasG3.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdRol"] = new SelectList(_context.Rols, "Id", "Id", usuario.IdRol);
+            ViewData["IdRol"] = new SelectList(_context.Rols, "Id", "Nombre", usuario.IdRol);
             return View(usuario);
         }
 
@@ -90,17 +94,21 @@ namespace WebComputadorasG3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdRol,Nombre,TipoDocumento,NumDocumento,Direccion,Telefono,Email,UsuarioRegistro,FechaRegistro,Estado,Clave")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdRol,Nombre,TipoDocumento,NumDocumento,Direccion,Telefono,Email")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!string.IsNullOrEmpty(usuario.Nombre))
             {
                 try
                 {
+                    usuario.Clave = Util.Encrypt("sis457");
+                    usuario.UsuarioRegistro = "Edward";
+                    usuario.FechaRegistro = DateTime.Now;
+                    usuario.Estado = 1;
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }

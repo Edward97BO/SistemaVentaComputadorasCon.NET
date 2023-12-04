@@ -9,107 +9,107 @@ using WebComputadorasG3.Models;
 
 namespace WebComputadorasG3.Controllers
 {
-    public class CategoriasController : Controller
+    public class RolesController : Controller
     {
         private readonly LabComputadorasG3Context _context;
 
-        public CategoriasController(LabComputadorasG3Context context)
+        public RolesController(LabComputadorasG3Context context)
         {
             _context = context;
         }
 
-        // GET: Categorias
+        // GET: Roles
         public async Task<IActionResult> Index()
         {
-              return _context.Categoria != null ? 
-                          View(await _context.Categoria.ToListAsync()) :
-                          Problem("Entity set 'LabComputadorasG3Context.Categoria'  is null.");
+              return _context.Rols != null ? 
+                          View(await _context.Rols.ToListAsync()) :
+                          Problem("Entity set 'LabComputadorasG3Context.Rols'  is null.");
         }
 
-        // GET: Categorias/Details/5
+        // GET: Roles/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Categoria == null)
+            if (id == null || _context.Rols == null)
             {
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria
+            var rol = await _context.Rols
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (categorium == null)
+            if (rol == null)
             {
                 return NotFound();
             }
 
-            return View(categorium);
+            return View(rol);
         }
 
-        // GET: Categorias/Create
+        // GET: Roles/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Categorias/Create
+        // POST: Roles/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion")] Categorium categorium)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion")] Rol rol)
         {
-            if (!string.IsNullOrEmpty(categorium.Nombre))
+            if (!string.IsNullOrEmpty(rol.Nombre))
             {
-                categorium.UsuarioRegistro = "Edward";
-                categorium.FechaRegistro = DateTime.Now;
-                categorium.Estado = 1;
-                _context.Add(categorium);
+                rol.UsuarioRegistro = "Edward";
+                rol.FechaRegistro = DateTime.Now;
+                rol.Estado = 1;
+                _context.Add(rol);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(categorium);
+            return View(rol);
         }
 
-        // GET: Categorias/Edit/5
+        // GET: Roles/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Categoria == null)
+            if (id == null || _context.Rols == null)
             {
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria.FindAsync(id);
-            if (categorium == null)
+            var rol = await _context.Rols.FindAsync(id);
+            if (rol == null)
             {
                 return NotFound();
             }
-            return View(categorium);
+            return View(rol);
         }
 
-        // POST: Categorias/Edit/5
+        // POST: Roles/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion")] Categorium categorium)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion")] Rol rol)
         {
-            if (id != categorium.Id)
+            if (id != rol.Id)
             {
                 return NotFound();
             }
 
-            if (!string.IsNullOrEmpty(categorium.Nombre))
+            if (!string.IsNullOrEmpty(rol.Nombre))
             {
                 try
                 {
-                    categorium.UsuarioRegistro = "Edward";
-                    categorium.FechaRegistro = DateTime.Now;
-                    categorium.Estado = 1;
-                    _context.Update(categorium);
+                    rol.UsuarioRegistro = "Edward";
+                    rol.FechaRegistro = DateTime.Now;
+                    rol.Estado = 1;
+                    _context.Update(rol);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoriumExists(categorium.Id))
+                    if (!RolExists(rol.Id))
                     {
                         return NotFound();
                     }
@@ -120,49 +120,49 @@ namespace WebComputadorasG3.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(categorium);
+            return View(rol);
         }
 
-        // GET: Categorias/Delete/5
+        // GET: Roles/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Categoria == null)
+            if (id == null || _context.Rols == null)
             {
                 return NotFound();
             }
 
-            var categorium = await _context.Categoria
+            var rol = await _context.Rols
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (categorium == null)
+            if (rol == null)
             {
                 return NotFound();
             }
 
-            return View(categorium);
+            return View(rol);
         }
 
-        // POST: Categorias/Delete/5
+        // POST: Roles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Categoria == null)
+            if (_context.Rols == null)
             {
-                return Problem("Entity set 'LabComputadorasG3Context.Categoria'  is null.");
+                return Problem("Entity set 'LabComputadorasG3Context.Rols'  is null.");
             }
-            var categorium = await _context.Categoria.FindAsync(id);
-            if (categorium != null)
+            var rol = await _context.Rols.FindAsync(id);
+            if (rol != null)
             {
-                _context.Categoria.Remove(categorium);
+                _context.Rols.Remove(rol);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoriumExists(int id)
+        private bool RolExists(int id)
         {
-          return (_context.Categoria?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Rols?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

@@ -47,7 +47,7 @@ namespace WebComputadorasG3.Controllers
         // GET: Articulos/Create
         public IActionResult Create()
         {
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id");
+            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Nombre");
             return View();
         }
 
@@ -93,7 +93,7 @@ namespace WebComputadorasG3.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,PrecioVenta,Stock,Descripcion,UsuarioRegistro,FechaRegistro,Estado")] Articulo articulo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,IdCategoria,Codigo,Nombre,PrecioVenta,Stock,Descripcion")] Articulo articulo)
         {
             if (id != articulo.Id)
             {
@@ -104,6 +104,9 @@ namespace WebComputadorasG3.Controllers
             {
                 try
                 {
+                    articulo.UsuarioRegistro = "Edward";
+                    articulo.FechaRegistro = DateTime.Now;
+                    articulo.Estado = 1;
                     _context.Update(articulo);
                     await _context.SaveChangesAsync();
                 }
@@ -120,7 +123,7 @@ namespace WebComputadorasG3.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", articulo.IdCategoria);
+            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Nombre", articulo.IdCategoria);
             return View(articulo);
         }
 
