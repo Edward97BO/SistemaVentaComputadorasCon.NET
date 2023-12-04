@@ -165,12 +165,56 @@
       "PackagePath": "staticwebassets\\images\\topics\\undraw_viral_tweet_gndb.png"
     },
     {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Asus.png",
+      "PackagePath": "staticwebassets\\img\\Asus.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Dell.png",
+      "PackagePath": "staticwebassets\\img\\Dell.png"
+    },
+    {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Logotipo.ico",
       "PackagePath": "staticwebassets\\img\\Logotipo.ico"
     },
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Logotipo.png",
       "PackagePath": "staticwebassets\\img\\Logotipo.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Monitor.png",
+      "PackagePath": "staticwebassets\\img\\Monitor.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\MonitorCurvo.png",
+      "PackagePath": "staticwebassets\\img\\MonitorCurvo.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\MonitorGamer.png",
+      "PackagePath": "staticwebassets\\img\\MonitorGamer.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Mouse.png",
+      "PackagePath": "staticwebassets\\img\\Mouse.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Msi.png",
+      "PackagePath": "staticwebassets\\img\\Msi.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\SillaG.png",
+      "PackagePath": "staticwebassets\\img\\SillaG.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\SillaGamer.png",
+      "PackagePath": "staticwebassets\\img\\SillaGamer.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\SillaOficina.png",
+      "PackagePath": "staticwebassets\\img\\SillaOficina.png"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Teclado.png",
+      "PackagePath": "staticwebassets\\img\\Teclado.png"
     },
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\hotdeal.png",
