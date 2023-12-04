@@ -26,11 +26,10 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.UsuarioRegistro)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaRegistro)
+        <dt class="col-sm-2">Fecha de Registro  
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FechaRegistro)
+            @Model.FechaRegistro.ToLongDateString() @Model.FechaRegistro.ToShortTimeString()
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Estado)
@@ -41,7 +40,7 @@
     </dl>
 
     <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
-        <a asp-action="Index">Back to List</a>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+        <a asp-action="Index">Volver a la Lista</a>
     </div>
 </div>

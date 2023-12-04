@@ -169,6 +169,10 @@
       "PackagePath": "staticwebassets\\img\\Logotipo.ico"
     },
     {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Logotipo.png",
+      "PackagePath": "staticwebassets\\img\\Logotipo.png"
+    },
+    {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\hotdeal.png",
       "PackagePath": "staticwebassets\\img\\hotdeal.png"
     },

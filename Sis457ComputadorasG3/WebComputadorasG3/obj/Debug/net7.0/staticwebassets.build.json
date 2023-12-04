@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1HQ6Bq7AG/Kb6kfmtIvWAsKqPru/UASWuc0znJrlemE=",
+  "Hash": "bTp/9Cam9jUSuLHce+SJAx8dZ8QkSko6cim0uxRrNUA=",
   "Source": "WebComputadorasG3",
   "BasePath": "_content/WebComputadorasG3",
   "Mode": "Default",
@@ -870,6 +870,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Logotipo.ico"
+    },
+    {
+      "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Logotipo.png",
+      "SourceId": "WebComputadorasG3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\",
+      "BasePath": "_content/WebComputadorasG3",
+      "RelativePath": "img/Logotipo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logotipo.png"
     },
     {
       "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\product01.png",
