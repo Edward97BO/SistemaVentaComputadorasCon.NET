@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebComputadorasG3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fac10dae8d5329cdac85750b6c8b88201ed8a46")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c530246e6654b69d9442b8f903035ccc3ebd402b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebComputadorasG3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebComputadorasG3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

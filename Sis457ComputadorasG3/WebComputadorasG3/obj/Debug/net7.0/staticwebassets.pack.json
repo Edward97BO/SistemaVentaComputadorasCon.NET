@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebComputadorasG3.bundle.scp.css"
     },
     {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\bootstrap-icons.css",
       "PackagePath": "staticwebassets\\css\\bootstrap-icons.css"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
     },
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\nouislider.min.css",
@@ -213,6 +221,10 @@
       "PackagePath": "staticwebassets\\img\\shop03.png"
     },
     {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\js\\all.min.js"
+    },
+    {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
@@ -227,6 +239,10 @@
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome.min.js"
     },
     {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\jquery.min.js",

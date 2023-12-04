@@ -8,7 +8,9 @@
 <div class="container">
     <h1><br><br>Categorías</h1>
     <p>
-        <a asp-action="Create">Crear</a>
+        <a asp-action="Create">
+            <i class="fa fa-plus"></i> Crear Categoría
+            </a>
     </p>
 
     <table class="table">
@@ -42,9 +44,9 @@
                         @(item.Estado == 1 ? "Activo" : "Inactivo")
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             }

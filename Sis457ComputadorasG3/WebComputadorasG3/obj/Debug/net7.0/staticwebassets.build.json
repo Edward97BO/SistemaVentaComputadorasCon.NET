@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2j6DPRk5Isuen6448E21cjzetf0qNx91IZPR88szhzg=",
+  "Hash": "yrcah29WPz1ka/eti+t4iS4fh/lRKOqrAgbLLjZ1KvY=",
   "Source": "WebComputadorasG3",
   "BasePath": "_content/WebComputadorasG3",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\WebComputadorasG3.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\all.min.css",
+      "SourceId": "WebComputadorasG3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\",
+      "BasePath": "_content/WebComputadorasG3",
+      "RelativePath": "css/all.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\all.min.css"
+    },
+    {
       "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "WebComputadorasG3",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap-icons.css"
+    },
+    {
+      "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\fontawesome.min.css",
+      "SourceId": "WebComputadorasG3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\",
+      "BasePath": "_content/WebComputadorasG3",
+      "RelativePath": "css/fontawesome.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\fontawesome.min.css"
     },
     {
       "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\css\\font-awesome.min.css",
@@ -1043,6 +1081,25 @@
       "OriginalItemSpec": "wwwroot\\img\\shop03.png"
     },
     {
+      "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\all.min.js",
+      "SourceId": "WebComputadorasG3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\",
+      "BasePath": "_content/WebComputadorasG3",
+      "RelativePath": "js/all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\all.min.js"
+    },
+    {
       "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\bootstrap.bundle.min.js",
       "SourceId": "WebComputadorasG3",
       "SourceType": "Discovered",
@@ -1117,6 +1174,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\custom.js"
+    },
+    {
+      "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\fontawesome.min.js",
+      "SourceId": "WebComputadorasG3",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\",
+      "BasePath": "_content/WebComputadorasG3",
+      "RelativePath": "js/fontawesome.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\fontawesome.min.js"
     },
     {
       "Identity": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\js\\jquery.min.js",

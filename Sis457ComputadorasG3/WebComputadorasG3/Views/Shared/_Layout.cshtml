@@ -17,6 +17,11 @@
     <link href="~/css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="~/css/templatemo-topic-listing.css" rel="stylesheet">
+    <!-- Íconos -->
+
+    <link href="~/css/all.min.css" rel="stylesheet">
+
+    <link href="~/css/fontawesome.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -60,6 +65,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Articulos" asp-action="Index">Artículos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
@@ -119,13 +127,13 @@
 
                     <p class="text-white d-flex mb-1">
                         <a href="tel: 305-240-9671" class="site-footer-link">
-                            305-240-9671
+                            + 591 78683665
                         </a>
                     </p>
 
                     <p class="text-white d-flex">
                         <a href="mailto:info@company.com" class="site-footer-link">
-                            info@company.com
+                            itpro@company.com
                         </a>
                     </p>
                 </div>
@@ -133,15 +141,15 @@
                 <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
+                            Español
                         </button>
 
                         <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button">Thai</button></li>
+                            <li><button class="dropdown-item" type="button">Inglés</button></li>
 
-                            <li><button class="dropdown-item" type="button">Myanmar</button></li>
+                            <li><button class="dropdown-item" type="button">Francés</button></li>
 
-                            <li><button class="dropdown-item" type="button">Arabic</button></li>
+                            <li><button class="dropdown-item" type="button">Chino</button></li>
                         </ul>
                     </div>
 
@@ -163,7 +171,8 @@
     <script src="~/js/jquery.sticky.js"></script>
     <script src="~/js/click-scroll.js"></script>
     <script src="~/js/custom.js"></script>
-
+    <script src="~/js/all.min.js"></script>
+    <script src="~/js/fontawesome.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
