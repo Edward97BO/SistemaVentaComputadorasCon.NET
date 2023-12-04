@@ -4,67 +4,69 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container">
-    <h1><br /><br />Artículos</h1>
+<div style="background-color: #68B5B6;">
+    <div class="container">
+        <h1><br /><br />Artículos</h1>
 
-    <p>
-        <a asp-action="Create">
-            <i class="fa fa-plus"></i> Crear Nuevo
-        </a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Nombre</th>
-                <th>Precio de Venta</th>
-                <th>Stock</th>
-                <th>Descripción</th>
-                <th>Usuario</th>
-                <th>Fecha de Registro</th>
-                <th>Estado</th>
-                <th>Categoría</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+        <p>
+            <a asp-action="Create">
+                <i class="fa fa-plus"></i> Crear Nuevo
+            </a>
+        </p>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Codigo)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PrecioVenta)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Stock)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Descripcion)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.UsuarioRegistro)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FechaRegistro)
-                    </td>
-                    <td>
-                        @(item.Estado == 1 ? "Activo" : "Inactivo")
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.Nombre)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
-                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
-                    </td>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Precio de Venta</th>
+                    <th>Stock</th>
+                    <th>Descripción</th>
+                    <th>Usuario</th>
+                    <th>Fecha de Registro</th>
+                    <th>Estado</th>
+                    <th>Categoría</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Codigo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PrecioVenta)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Stock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descripcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaRegistro)
+                        </td>
+                        <td>
+                            @(item.Estado == 1 ? "Activo" : "Inactivo")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.Nombre)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                            <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

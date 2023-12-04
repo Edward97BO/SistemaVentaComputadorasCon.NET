@@ -4,71 +4,74 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container">
-    <h2><br /><br />Usuarios</h2>
+<div style="background-color: #68B5B6;">
 
-    <p>
-        <a asp-action="Create">
-            <i class="fa fa-plus"></i> Crear Usuario
-        </a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tipo de Documento</th>
-                <th>Número de Documento</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Email</th>
-                <th>Usuario</th>
-                <th>Fecha de Registro</th>
-                <th>Estado</th>
-                <th>Rol</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="container">
+        <h2><br /><br />Usuarios</h2>
+
+        <p>
+            <a asp-action="Create">
+                <i class="fa fa-plus"></i> Crear Usuario
+            </a>
+        </p>
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Nombre)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.TipoDocumento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NumDocumento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Direccion)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Telefono)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.UsuarioRegistro)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FechaRegistro)
-                    </td>
-                    <td>
-                        @(item.Estado == 1 ? "Activo" : "Inactivo")
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.IdRolNavigation.Nombre)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
-                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
-                    </td>
+                    <th>Nombre</th>
+                    <th>Tipo de Documento</th>
+                    <th>Número de Documento</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Usuario</th>
+                    <th>Fecha de Registro</th>
+                    <th>Estado</th>
+                    <th>Rol</th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TipoDocumento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumDocumento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaRegistro)
+                        </td>
+                        <td>
+                            @(item.Estado == 1 ? "Activo" : "Inactivo")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdRolNavigation.Nombre)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a> |
+                            <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-circle-info"></i></a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

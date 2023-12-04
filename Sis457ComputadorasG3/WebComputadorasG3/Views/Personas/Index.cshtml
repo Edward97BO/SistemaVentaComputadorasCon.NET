@@ -1,21 +1,28 @@
-﻿@model IEnumerable<WebComputadorasG3.Models.Rol>
+﻿@model IEnumerable<WebComputadorasG3.Models.Persona>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div style="background-color: #68B5B6;">
     <div class="container">
-        <h2><br /><br />Roles</h2>
-
+        <h2><br /><br />Personas</h2>
         <p>
-            <a asp-action="Create"><i class="fa fa-plus"></i> Crear Nuevo</a>
+            <a asp-action="Create">
+                <i class="fa fa-plus"></i> Crear Persona
+            </a>
         </p>
         <table class="table">
             <thead>
                 <tr>
-                    <th>Rol</th>
-                    <th>Descripción </th>
+                    <th>Tipo de Persona </th>
+                    <th>Nombre </th>
+                    <th>Tipo de Documento</th>
+                    <th>Número de Documento</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
                     <th>Usuario</th>
                     <th>Fecha de Registro</th>
                     <th>Estado</th>
@@ -27,10 +34,25 @@
                 {
                     <tr>
                         <td>
+                            @Html.DisplayFor(modelItem => item.TipoPersona)
+                        </td>
+                        <td>
                             @Html.DisplayFor(modelItem => item.Nombre)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Descripcion)
+                            @Html.DisplayFor(modelItem => item.TipoDocumento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumDocumento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Direccion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.UsuarioRegistro)

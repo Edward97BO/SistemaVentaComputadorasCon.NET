@@ -63,28 +63,29 @@
                     </li>
                     @if (User.Identity?.IsAuthenticated == true)
                     {
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-secret"></i> Admin</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-secret"></i> Admin</a>
 
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="Index"><i class="fa fa-user"></i> Usuarios</a></li>
-                            <li><a class="dropdown-item" href="topics-listing.html"><i class="fa-solid fa-users-gear"></i> Empleados</a></li>
-                            <li><a class="dropdown-item" href="topics-listing.html"><i class="fa-solid fa-truck-field"></i> Proveedores</a></li>
-                            <li><a class="dropdown-item" href="topics-listing.html"><i class="fa-solid fa-users"></i> Clientes</a></li>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="Index"><i class="fa fa-user"></i> Usuarios</a></li>
+                                <li><a class="dropdown-item" asp-controller="Roles" asp-action="Index"><i class="fa-solid fa-users-gear"></i> Roles</a></li>
+                                <li><a class="dropdown-item" asp-controller="Personas" asp-action="Index"><i class="fa fa-person"></i> Personas</a></li>
+                                <li><a class="dropdown-item" href="topics-listing.html"><i class="fa-solid fa-users"></i> Clientes</a></li>
+                                <li><a class="dropdown-item" href="topics-listing.html"><i class="fa-solid fa-truck-field"></i> Proveedores</a></li>
 
 
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-shop"></i> Mercado</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-shop"></i> Mercado</a>
 
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="fa fa-list"></i> Categorías</a></li>
-                            <li><a class="dropdown-item" asp-controller="Articulos" asp-action="Index"><i class="fa fa-newspaper"></i> Artículos</a></li>
-                            <li><a class="dropdown-item" href="topics-listing.html"><i class="fa fa-cart-shopping"></i> Compras</a></li>
-                            <li><a class="dropdown-item" href="contact.html"><i class="fa fa-sack-dollar"></i> Ventas</a></li>
-                        </ul>
-                    </li>
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-controller="Categorias" asp-action="Index"><i class="fa fa-list"></i> Categorías</a></li>
+                                <li><a class="dropdown-item" asp-controller="Articulos" asp-action="Index"><i class="fa fa-newspaper"></i> Artículos</a></li>
+                                <li><a class="dropdown-item" href="topics-listing.html"><i class="fa fa-cart-shopping"></i> Compras</a></li>
+                                <li><a class="dropdown-item" href="contact.html"><i class="fa fa-sack-dollar"></i> Ventas</a></li>
+                            </ul>
+                        </li>
                     }
                 </ul>
 

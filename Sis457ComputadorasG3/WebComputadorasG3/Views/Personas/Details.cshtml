@@ -1,36 +1,43 @@
-﻿@model WebComputadorasG3.Models.Articulo
+﻿@model WebComputadorasG3.Models.Persona
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div style="background-color: #68B5B6;">
-    <div class="container">
-        <h1><br /><br />Eliminar Artículo</h1>
 
-        <h3>¿Está seguro que desea eliminar el Artículo?</h3>
-        <h4>Articulo</h4>
+<div style="background-color: #68B5B6;">
+
+    <div class="container">
+        <h2><br /><br />Detalles de la Persona</h2>
         <hr />
         <dl class="row">
-            <dt class="col-sm-2">Código</dt>
+            <dt class="col-sm-2">Tipo de Persona</dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Codigo)
+                @Html.DisplayFor(model => model.TipoPersona)
             </dd>
             <dt class="col-sm-2">Nombre</dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Nombre)
             </dd>
-            <dt class="col-sm-2">Precio de Venta</dt>
+            <dt class="col-sm-2">Tipo de Documento</dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.PrecioVenta)
+                @Html.DisplayFor(model => model.TipoDocumento)
             </dd>
-            <dt class="col-sm-2">Stock</dt>
+            <dt class="col-sm-2">Número de Documento</dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Stock)
+                @Html.DisplayFor(model => model.NumDocumento)
             </dd>
-            <dt class="col-sm-2">Descripción</dt>
+            <dt class="col-sm-2">Dirección</dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.Descripcion)
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+            <dt class="col-sm-2">Teléfono</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+            <dt class="col-sm-2">Email</dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
             </dd>
             <dt class="col-sm-2">Usuario</dt>
             <dd class="col-sm-10">
@@ -44,16 +51,10 @@
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Estado)
             </dd>
-            <dt class="col-sm-2">Categoría</dt>
-            <dd class="col-sm-10">
-                @Html.DisplayFor(model => model.IdCategoriaNavigation.Id)
-            </dd>
         </dl>
-
-        <form asp-action="Delete">
-            <input type="hidden" asp-for="Id" />
-            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <div>
+            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
             <a asp-action="Index">Volver a la Lista</a>
-        </form>
+        </div>
     </div>
 </div>

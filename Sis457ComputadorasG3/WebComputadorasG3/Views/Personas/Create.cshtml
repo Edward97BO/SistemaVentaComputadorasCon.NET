@@ -1,33 +1,40 @@
-﻿@model WebComputadorasG3.Models.Usuario
+﻿@model WebComputadorasG3.Models.Persona
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div style="background-color: #68B5B6;">
 
     <div class="container">
-        <h2><br /><br />Editar Usuario</h2>
-
+        <h2><br /><br />Crear Persona</h2>
         <hr />
         <div class="row">
             <div class="col-md-4">
-                <form asp-action="Edit">
+                <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input type="hidden" asp-for="Id" />
                     <div class="form-group">
-                        <label asp-for="IdRol" class="control-label">Rol</label>
-                        <select asp-for="IdRol" class="form-control" asp-items="ViewBag.IdRol"></select>
-                        <span asp-validation-for="IdRol" class="text-danger"></span>
+                        <label class="control-label">Tipo de Persona</label>
+                        <select asp-for="TipoPersona" class="form-control">
+                            <option>Empleado</option>
+                            <option>Cliente</option>
+                            <option>Proveedor</option>
+                        </select>
+                        <span asp-validation-for="TipoPersona" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Nombre</label>
+                        <label asp-for="Nombre" class="control-label"></label>
                         <input asp-for="Nombre" class="form-control" />
                         <span asp-validation-for="Nombre" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Tipo de Documento</label>
-                        <input asp-for="TipoDocumento" class="form-control" />
+                        <label class="control-label">Tipo de Dcoumento</label>
+                        <select asp-for="TipoDocumento" class="form-select">
+                            <option>Carnet de Identidad</option>
+                            <option>Pasaporte</option>
+                            <option>Tarjeta de Residencia</option>
+                        </select>
                         <span asp-validation-for="TipoDocumento" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -46,13 +53,13 @@
                         <span asp-validation-for="Telefono" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Email</label>
+                        <label asp-for="Email" class="control-label"></label>
                         <input asp-for="Email" class="form-control" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <br />
                     <div class="form-group">
-                        <input type="submit" value="Guardar" class="btn btn-primary" />|
+                        <input type="submit" value="Crear" class="btn btn-primary" />|
                         <a asp-action="Index">Volver a la Lista</a>
                     </div>
                 </form>
@@ -60,6 +67,7 @@
         </div>
     </div>
 </div>
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
