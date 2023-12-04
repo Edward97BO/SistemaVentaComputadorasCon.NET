@@ -165,6 +165,10 @@
       "PackagePath": "staticwebassets\\images\\topics\\undraw_viral_tweet_gndb.png"
     },
     {
+      "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\Logotipo.ico",
+      "PackagePath": "staticwebassets\\img\\Logotipo.ico"
+    },
+    {
       "Id": "D:\\Universidad\\Trabajo\\sis457_computadoras_g3\\Sis457ComputadorasG3\\WebComputadorasG3\\wwwroot\\img\\hotdeal.png",
       "PackagePath": "staticwebassets\\img\\hotdeal.png"
     },
