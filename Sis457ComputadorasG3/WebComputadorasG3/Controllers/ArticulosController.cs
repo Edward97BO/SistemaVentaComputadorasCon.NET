@@ -84,7 +84,7 @@ namespace WebComputadorasG3.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Id", articulo.IdCategoria);
+            ViewData["IdCategoria"] = new SelectList(_context.Categoria, "Id", "Nombre", articulo.IdCategoria);
             return View(articulo);
         }
 

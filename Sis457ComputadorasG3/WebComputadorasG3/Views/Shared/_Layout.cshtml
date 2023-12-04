@@ -61,6 +61,8 @@
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="#section_5">Contacto</a>
                     </li>
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user-secret"></i> Admin</a>
 
@@ -83,10 +85,18 @@
                             <li><a class="dropdown-item" href="contact.html"><i class="fa fa-sack-dollar"></i> Ventas</a></li>
                         </ul>
                     </li>
+                    }
                 </ul>
 
                 <div class="d-none d-lg-block">
-                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    @if (User.Identity?.IsAuthenticated == false)
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="navbar-icon bi-person smoothscroll"></a>
+                    }
+                    else
+                    {
+                        @await Html.PartialAsync("_LogoutPartial")
+                    }
                 </div>
             </div>
         </div>
